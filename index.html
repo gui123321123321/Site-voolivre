@@ -1,0 +1,2847 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="description"
+        content="Voa Rio! — O Rio aos seus pés. O céu à sua frente."
+    >
+
+    <meta
+        name="theme-color"
+        content="#0b1118"
+    >
+
+    <title>Voa Rio! | O Rio aos seus pés. O céu à sua frente.</title>
+
+
+    <style>
+
+        /* ==============================
+           CONFIGURAÇÕES GERAIS
+        ============================== */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+
+        body {
+            margin: 0;
+
+            background: #0b1118;
+
+            color: #ffffff;
+
+            font-family:
+                Arial,
+                Helvetica,
+                sans-serif;
+        }
+
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+
+        /* ==============================
+           CABEÇALHO
+        ============================== */
+
+        .cabecalho {
+            position: absolute;
+
+            top: 0;
+            left: 0;
+
+            width: 100%;
+
+            padding: 22px 20px;
+
+            z-index: 20;
+        }
+
+
+        .cabecalho-conteudo {
+            width: 100%;
+
+            max-width: 1200px;
+
+            margin: 0 auto;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: space-between;
+        }
+
+        .seletor-idioma {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    padding: 4px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(10px);
+}
+
+.seletor-idioma button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    border: none;
+    background: transparent;
+    color: #ffffff;
+    padding: 7px 9px;
+    border-radius: 999px;
+    font-size: 12px;
+    font-weight: 700;
+    cursor: pointer;
+    transition:
+        background 0.2s ease,
+        transform 0.2s ease;
+}
+
+.seletor-idioma button:hover {
+    background: rgba(255, 255, 255, 0.14);
+    transform: translateY(-1px);
+}
+
+.seletor-idioma .bandeira {
+    font-size: 16px;
+    line-height: 1;
+}
+
+.seletor-idioma .idioma-ativo {
+    background: rgba(255, 255, 255, 0.18);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.12);
+}
+        
+        .logo {
+            font-size: 26px;
+
+            font-weight: 700;
+
+            letter-spacing: -1px;
+
+            color: #ffffff;
+        }
+
+
+        .botao-cabecalho {
+            display: inline-flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            min-height: 48px;
+
+            padding: 0 21px;
+
+            border-radius: 999px;
+
+            background: #ffffff;
+
+            color: #101820;
+
+            font-size: 14px;
+
+            font-weight: 700;
+        }
+
+
+        /* ==============================
+           HERO
+        ============================== */
+
+        .hero {
+            position: relative;
+
+            min-height: 100vh;
+            min-height: 100svh;
+
+            display: flex;
+
+            align-items: flex-end;
+
+            overflow: hidden;
+
+            background:
+                linear-gradient(
+                    to bottom,
+                    rgba(7, 15, 23, 0.15),
+                    rgba(7, 15, 23, 0.25) 40%,
+                    rgba(7, 15, 23, 0.92) 100%
+                ),
+                url("hero.jpg")
+                center center
+                / cover
+                no-repeat;
+        }
+
+
+        .hero-conteudo {
+            position: relative;
+
+            z-index: 5;
+
+            width: 100%;
+
+            max-width: 1200px;
+
+            margin: 0 auto;
+
+            padding:
+                0
+                20px
+                70px;
+
+            color: #ffffff;
+        }
+
+
+        .hero-rotulo {
+            margin-bottom: 15px;
+
+            color: rgba(255, 255, 255, 0.85);
+
+            font-size: 12px;
+
+            font-weight: 700;
+
+            letter-spacing: 2.5px;
+
+            text-transform: uppercase;
+        }
+
+
+        .hero-titulo {
+            max-width: 850px;
+
+            margin-bottom: 25px;
+
+            color: #ffffff;
+
+            font-size:
+                clamp(
+                    54px,
+                    15vw,
+                    105px
+                );
+
+            font-weight: 700;
+
+            line-height: 0.9;
+
+            letter-spacing: -5px;
+        }
+
+
+        .hero-slogan {
+            max-width: 600px;
+
+            margin-bottom: 32px;
+
+            color: #ffffff;
+
+            font-size:
+                clamp(
+                    21px,
+                    5.5vw,
+                    30px
+                );
+
+            font-weight: 400;
+
+            line-height: 1.35;
+        }
+
+
+        .botao-hero {
+            display: inline-flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            min-height: 52px;
+
+            padding: 0 24px;
+
+            border-radius: 999px;
+
+            background: #ffffff;
+
+            color: #101820;
+
+            font-size: 15px;
+
+            font-weight: 700;
+        }
+
+
+        /* ==============================
+           TELAS MAIORES
+        ============================== */
+
+        @media (min-width: 768px) {
+
+            .cabecalho {
+                padding:
+                    28px
+                    35px;
+            }
+
+
+            .hero-conteudo {
+                padding:
+                    0
+                    35px
+                    95px;
+            }
+
+
+            .logo {
+                font-size: 28px;
+            }
+
+
+            .botao-cabecalho {
+                min-height: 50px;
+
+                padding:
+                    0
+                    23px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- ==============================
+         CABEÇALHO
+    ============================== -->
+
+    <header class="cabecalho">
+
+        <div class="cabecalho-conteudo">
+    <a
+        href="#inicio"
+        class="logo"
+    >
+        Voa Rio!
+    </a>
+
+    <div class="seletor-idioma">
+    <button type="button" data-idioma="pt">
+        <span class="bandeira">🇧🇷</span>
+        <span>PT</span>
+    </button>
+
+    <button type="button" data-idioma="en">
+        <span class="bandeira">🇺🇸</span>
+        <span>EN</span>
+    </button>
+
+    <button type="button" data-idioma="es">
+        <span class="bandeira">🇪🇸</span>
+        <span>ES</span>
+    </button>
+    </div>
+        </div>
+
+    </header>
+
+
+
+    <!-- ==============================
+         ABERTURA
+    ============================== -->
+
+    <main>
+
+        <section
+            class="hero"
+            id="inicio"
+        >
+
+            <div class="hero-conteudo">
+
+
+                <p class="hero-rotulo">
+                    Voo livre no Rio de Janeiro
+                </p>
+
+
+                <h1 class="hero-titulo">
+                    Voa Rio!
+                </h1>
+
+
+                <p class="hero-slogan">
+                    O Rio aos seus pés.<br>
+                    O céu à sua frente.
+                </p>
+
+
+                <a
+                    href="https://wa.me/5521975899356?text=Ol%C3%A1!%20Tenho%20algumas%20d%C3%BAvidas%20sobre%20os%20voos%20do%20Voa%20Rio!%20e%20gostaria%20de%20saber%20mais%20ou%20agendar%20meu%20voo."
+                    class="botao-hero"
+                >
+                    Quero voar
+                </a>
+
+
+            </div>
+
+        </section>
+
+                <!-- ==============================
+             MODALIDADES
+        ============================== -->
+
+        <section class="modalidades" id="modalidades">
+
+            <div class="modalidades-introducao">
+
+                <p class="modalidades-rotulo">
+                    Duas formas de voar
+                </p>
+
+                <h2 class="modalidades-titulo">
+                    Escolha como você quer conhecer o Rio pelo céu.
+                </h2>
+
+                <p class="modalidades-texto">
+                    Na Pedra Bonita, duas modalidades permitem viver
+                    o voo livre de maneiras diferentes: asa-delta e
+                    parapente.
+                </p>
+
+            </div>
+
+
+            <div class="modalidades-lista">
+
+
+                <!-- ==========================
+                     CARD ASA-DELTA
+                =========================== -->
+
+                <article class="modalidade modalidade-asa">
+
+                    <div class="modalidade-imagem">
+
+                        <img
+                            src="asa-delta.jpg"
+                            alt="Voo duplo de asa-delta na Pedra Bonita"
+                        >
+
+                    </div>
+
+
+                    <div class="modalidade-conteudo">
+
+                        <p class="modalidade-rotulo">
+                            Asa-delta
+                        </p>
+
+                        <h3>
+                            Uma forma clássica de conhecer o Rio pelo céu.
+                        </h3>
+
+                        <p>
+                            A experiência começa na Pedra Bonita e segue
+                            em direção a São Conrado, acompanhada por um
+                            piloto-instrutor durante todo o voo.
+                        </p>
+
+                        <a
+                            href="asa-delta.html"
+                            class="modalidade-link"
+                        >
+                            Saiba mais
+                            <span>→</span>
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- ==========================
+                     CARD PARAPENTE
+                =========================== -->
+
+                <article class="modalidade modalidade-parapente">
+
+                    <div class="modalidade-imagem">
+
+                        <img
+                            src="parapente.jpg"
+                            alt="Voo duplo de parapente na Pedra Bonita"
+                        >
+
+                    </div>
+
+
+                    <div class="modalidade-conteudo">
+
+                        <p class="modalidade-rotulo">
+                            Parapente
+                        </p>
+
+                        <h3>
+                            Uma outra maneira de partir da Pedra Bonita.
+                        </h3>
+
+                        <p>
+                            No voo duplo de parapente, você parte da
+                            Pedra Bonita acompanhado por um piloto-instrutor
+                            e conhece São Conrado a partir de uma nova
+                            perspectiva.
+                        </p>
+
+                        <a
+                            href="parapente.html"
+                            class="modalidade-link"
+                        >
+                            Saiba mais
+                            <span>→</span>
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ==============================
+             ESTILO — MODALIDADES
+        ============================== -->
+
+        <style>
+
+            .modalidades {
+                padding: 95px 20px;
+
+                background: #f4f5f3;
+
+                color: #111820;
+            }
+
+
+            .modalidades-introducao {
+                width: 100%;
+
+                max-width: 900px;
+
+                margin: 0 auto 55px;
+            }
+
+
+            .modalidades-rotulo {
+                margin-bottom: 16px;
+
+                color: #68737c;
+
+                font-size: 12px;
+
+                font-weight: 700;
+
+                letter-spacing: 2.2px;
+
+                text-transform: uppercase;
+            }
+
+
+            .modalidades-titulo {
+                max-width: 850px;
+
+                margin-bottom: 24px;
+
+                font-size:
+                    clamp(
+                        35px,
+                        8vw,
+                        64px
+                    );
+
+                line-height: 1.02;
+
+                letter-spacing: -2.5px;
+            }
+
+
+            .modalidades-texto {
+                max-width: 680px;
+
+                color: #59636c;
+
+                font-size: 18px;
+
+                line-height: 1.7;
+            }
+
+
+            /* ==========================
+               LISTA DE CARDS
+            =========================== */
+
+            .modalidades-lista {
+                width: 100%;
+
+                max-width: 1200px;
+
+                margin: 0 auto;
+
+                display: flex;
+
+                flex-direction: column;
+
+                gap: 28px;
+            }
+
+
+            /* ==========================
+               CARD
+            =========================== */
+
+            .modalidade {
+                overflow: hidden;
+
+                border-radius: 28px;
+
+                background: #101820;
+
+                color: #ffffff;
+            }
+
+
+            .modalidade-imagem {
+                width: 100%;
+
+                aspect-ratio: 4 / 3;
+
+                overflow: hidden;
+            }
+
+
+            .modalidade-imagem img {
+                width: 100%;
+
+                height: 100%;
+
+                object-fit: cover;
+            }
+
+
+            .modalidade-conteudo {
+                padding: 32px 25px 35px;
+            }
+
+
+            .modalidade-rotulo {
+                margin-bottom: 13px;
+
+                color: #c99b32;
+
+                font-size: 12px;
+
+                font-weight: 700;
+
+                letter-spacing: 2.5px;
+
+                text-transform: uppercase;
+            }
+
+
+            .modalidade-conteudo h3 {
+                max-width: 650px;
+
+                margin-bottom: 18px;
+
+                color: #ffffff;
+
+                font-size:
+                    clamp(
+                        29px,
+                        7vw,
+                        48px
+                    );
+
+                line-height: 1.05;
+
+                letter-spacing: -1.5px;
+            }
+
+
+            .modalidade-conteudo > p:not(.modalidade-rotulo) {
+                max-width: 650px;
+
+                margin-bottom: 28px;
+
+                color: rgba(255, 255, 255, 0.72);
+
+                font-size: 16px;
+
+                line-height: 1.7;
+            }
+
+
+            /* ==========================
+               LINK
+            =========================== */
+
+            .modalidade-link {
+                display: inline-flex;
+
+                align-items: center;
+
+                gap: 9px;
+
+                padding-bottom: 5px;
+
+                border-bottom:
+                    1px solid
+                    rgba(255, 255, 255, 0.5);
+
+                color: #ffffff;
+
+                font-size: 15px;
+
+                font-weight: 700;
+            }
+
+
+            .modalidade-link span {
+                font-size: 20px;
+
+                line-height: 1;
+            }
+
+
+            /* ==========================
+               TELAS MAIORES
+            =========================== */
+
+            @media (min-width: 768px) {
+
+                .modalidades {
+                    padding:
+                        140px
+                        35px;
+                }
+
+
+                .modalidades-lista {
+                    display: grid;
+
+                    grid-template-columns:
+                        1fr
+                        1fr;
+
+                    align-items: stretch;
+
+                    gap: 28px;
+                }
+
+
+                .modalidade-asa
+                .modalidade-imagem {
+                    aspect-ratio: 16 / 10;
+                }
+
+
+                .modalidade-parapente {
+                    margin-top: 0;
+                }
+
+
+                .modalidade-parapente
+                .modalidade-imagem {
+                    aspect-ratio: 16 / 10;
+                }
+
+
+                .modalidade-conteudo {
+                    padding:
+                        38px
+                        35px
+                        42px;
+                }
+
+            }
+
+        </style>
+
+    </main>
+
+<!-- BLOCO 3 — UMA NOVA PERSPECTIVA -->
+
+<style>
+  .perspectiva {
+    position: relative;
+    background: #111;
+    color: #fff;
+    overflow: hidden;
+    padding: 0 0 110px;
+  }
+
+  .perspectiva-imagem {
+    position: relative;
+    width: 100%;
+    height: 88vh;
+    min-height: 600px;
+    overflow: hidden;
+  }
+
+  .perspectiva-imagem img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transform: scale(1.02);
+  }
+
+  .perspectiva-imagem::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+      linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.02) 20%,
+        rgba(0, 0, 0, 0.08) 45%,
+        rgba(0, 0, 0, 0.75) 100%
+      );
+  }
+
+  .perspectiva-conteudo {
+    position: relative;
+    z-index: 2;
+    width: calc(100% - 32px);
+    max-width: 1050px;
+    margin: -120px auto 0;
+    padding: 48px 28px 55px;
+    background: #f4f1eb;
+    color: #151515;
+    box-shadow: 0 25px 70px rgba(0, 0, 0, 0.28);
+  }
+
+  .perspectiva-linha {
+    width: 55px;
+    height: 3px;
+    margin-bottom: 25px;
+    background: #b18a4a;
+  }
+
+  .perspectiva-rotulo {
+    display: block;
+    margin-bottom: 20px;
+    color: #9b7a3d;
+    font-size: 0.76rem;
+    font-weight: 700;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+  }
+
+  .perspectiva-titulo {
+    margin: 0 0 30px;
+    max-width: 900px;
+    font-size: clamp(3rem, 12vw, 7rem);
+    line-height: 0.92;
+    letter-spacing: -0.055em;
+    font-weight: 600;
+  }
+
+  .perspectiva-texto {
+    max-width: 720px;
+    margin: 0 0 20px;
+    color: #4b4b4b;
+    font-size: 1.08rem;
+    line-height: 1.85;
+  }
+
+  .perspectiva-destaque {
+    max-width: 700px;
+    margin: 42px 0 0;
+    padding-top: 30px;
+    border-top: 1px solid #d8d2c7;
+    color: #151515;
+    font-size: 1.3rem;
+    line-height: 1.55;
+    font-weight: 600;
+  }
+
+  @media (min-width: 800px) {
+
+    .perspectiva {
+      padding-bottom: 150px;
+    }
+
+    .perspectiva-imagem {
+      height: 88vh;
+      min-height: 720px;
+    }
+
+    .perspectiva-conteudo {
+      width: calc(100% - 80px);
+      margin-top: -160px;
+      padding: 75px 80px 80px;
+    }
+
+    .perspectiva-titulo {
+      margin-bottom: 38px;
+    }
+
+    .perspectiva-texto {
+      font-size: 1.12rem;
+    }
+
+    .perspectiva-destaque {
+      font-size: 1.45rem;
+    }
+  }
+</style>
+
+<section class="perspectiva" id="perspectiva">
+
+  <div class="perspectiva-imagem">
+
+    <img
+      src="perspectiva.jpg"
+      alt="Vista do Rio de Janeiro a partir da Pedra Bonita"
+    >
+
+  </div>
+
+  <div class="perspectiva-conteudo">
+
+    <div class="perspectiva-linha"></div>
+
+    <span class="perspectiva-rotulo">
+      Uma nova perspectiva
+    </span>
+
+    <h2 class="perspectiva-titulo">
+      Você já imaginou ver o Rio assim?
+    </h2>
+
+    <p class="perspectiva-texto">
+      Da Pedra Bonita, montanhas, mar e cidade formam uma paisagem
+      que ganha outra dimensão vista do alto.
+    </p>
+
+    <p class="perspectiva-texto">
+      O voo segue em direção a São Conrado, revelando o Rio por
+      um ponto de vista que não existe no chão.
+    </p>
+
+    <p class="perspectiva-destaque">
+      Talvez o seu próximo ponto de vista seja o céu.
+    </p>
+
+  </div>
+
+</section>
+
+    <!-- BLOCO 4 — NOSSA HISTÓRIA -->
+
+<style>
+  .historia {
+    background: #111;
+    color: #fff;
+    padding: 100px 20px 110px;
+    overflow: hidden;
+  }
+
+  .historia-conteudo {
+    max-width: 1150px;
+    margin: 0 auto;
+  }
+
+  .historia-topo {
+    max-width: 850px;
+    margin-bottom: 55px;
+  }
+
+  .historia-rotulo {
+    display: block;
+    margin-bottom: 20px;
+    color: #c7a15a;
+    font-size: 0.76rem;
+    font-weight: 700;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+  }
+
+  .historia-titulo {
+    margin: 0;
+    font-size: clamp(3rem, 11vw, 6.5rem);
+    line-height: 0.93;
+    letter-spacing: -0.055em;
+    font-weight: 600;
+  }
+
+  .historia-corpo {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 45px;
+    align-items: start;
+  }
+
+  .historia-imagem {
+    width: 100%;
+    height: 430px;
+    overflow: hidden;
+  }
+
+  .historia-imagem img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  .historia-texto {
+    max-width: 650px;
+  }
+
+  .historia-abertura {
+    margin: 0 0 28px;
+    font-size: 1.35rem;
+    line-height: 1.55;
+    font-weight: 500;
+  }
+
+  .historia-paragrafo {
+    margin: 0 0 21px;
+    color: rgba(255, 255, 255, 0.72);
+    font-size: 1rem;
+    line-height: 1.85;
+  }
+
+  .historia-assinatura {
+    position: relative;
+    margin: 42px 0 0;
+    padding: 28px 0 0 22px;
+    border-top: 1px solid rgba(255, 255, 255, 0.16);
+    color: #fff;
+    font-size: 1.15rem;
+    line-height: 1.6;
+    font-weight: 600;
+  }
+
+  .historia-assinatura::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 28px;
+    width: 2px;
+    height: 55px;
+    background: #c7a15a;
+  }
+
+  @media (min-width: 800px) {
+
+    .historia {
+      padding: 150px 60px;
+    }
+
+    .historia-topo {
+      margin-bottom: 85px;
+    }
+
+    .historia-corpo {
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 90px;
+      align-items: center;
+    }
+
+    .historia-imagem {
+      height: 620px;
+    }
+
+    .historia-abertura {
+      font-size: 1.5rem;
+    }
+
+    .historia-paragrafo {
+      font-size: 1.05rem;
+    }
+
+  }
+</style>
+
+<section class="historia" id="historia">
+
+  <div class="historia-conteudo">
+
+    <div class="historia-topo">
+
+      <span class="historia-rotulo">
+        Nossa história
+      </span>
+
+      <h2 class="historia-titulo">
+        O voo faz parte da nossa história.
+      </h2>
+
+    </div>
+
+    <div class="historia-corpo">
+
+      <div class="historia-imagem">
+
+        <img
+          src="historia.jpg"
+          alt="Pedra Bonita e a paisagem do Rio de Janeiro"
+        >
+
+      </div>
+
+      <div class="historia-texto">
+
+        <p class="historia-abertura">
+          O céu sempre fez parte da nossa paisagem.
+        </p>
+
+        <p class="historia-paragrafo">
+          Para quem chega à Pedra Bonita para conhecer o voo livre,
+          aquele lugar pode ser o início de uma experiência. Para nós,
+          ele também faz parte da nossa história.
+        </p>
+
+        <p class="historia-paragrafo">
+          Vivemos em Pedra Bonita e fazemos parte de uma família
+          tradicional da região, onde a relação com o voo livre
+          atravessa gerações.
+        </p>
+
+        <p class="historia-paragrafo">
+          Foi dessa ligação com o lugar, com o voo e com a nossa
+          própria história que nasceu o Voa Rio!
+        </p>
+
+        <p class="historia-assinatura">
+          Conheça o Rio pelo céu, através de quem vive esse lugar.
+        </p>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- BLOCO 5 — COMO FUNCIONA -->
+
+<style>
+  .processo {
+    background: #f4f1eb;
+    color: #151515;
+    padding: 100px 20px 120px;
+    overflow: hidden;
+  }
+
+  .processo-conteudo {
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  .processo-topo {
+    max-width: 800px;
+    margin-bottom: 70px;
+  }
+
+  .processo-rotulo {
+    display: block;
+    margin-bottom: 20px;
+    color: #9b7a3d;
+    font-size: 0.76rem;
+    font-weight: 700;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+  }
+
+  .processo-titulo {
+    margin: 0;
+    font-size: clamp(3rem, 11vw, 6.2rem);
+    line-height: 0.93;
+    letter-spacing: -0.055em;
+    font-weight: 600;
+  }
+
+  .processo-introducao {
+    max-width: 650px;
+    margin: 28px 0 0;
+    color: #555;
+    font-size: 1.05rem;
+    line-height: 1.8;
+  }
+
+  .processo-lista {
+    position: relative;
+    max-width: 850px;
+    margin: 0 auto;
+  }
+
+  .processo-lista::before {
+    content: "";
+    position: absolute;
+    left: 18px;
+    top: 15px;
+    bottom: 15px;
+    width: 1px;
+    background: #d4cec3;
+  }
+
+  .processo-etapa {
+    position: relative;
+    display: grid;
+    grid-template-columns: 38px 1fr;
+    gap: 25px;
+    margin-bottom: 55px;
+  }
+
+  .processo-etapa:last-child {
+    margin-bottom: 0;
+  }
+
+  .processo-numero {
+    position: relative;
+    z-index: 2;
+    width: 37px;
+    height: 37px;
+    border: 1px solid #b18a4a;
+    border-radius: 50%;
+    background: #f4f1eb;
+    color: #9b7a3d;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.8rem;
+    font-weight: 700;
+  }
+
+  .processo-etapa-titulo {
+    margin: 2px 0 12px;
+    font-size: 1.35rem;
+    line-height: 1.3;
+    font-weight: 600;
+  }
+
+  .processo-etapa-texto {
+    margin: 0;
+    color: #555;
+    font-size: 1rem;
+    line-height: 1.8;
+  }
+
+  @media (min-width: 800px) {
+
+    .processo {
+      padding: 150px 60px;
+    }
+
+    .processo-topo {
+      margin-bottom: 100px;
+    }
+
+    .processo-introducao {
+      font-size: 1.1rem;
+    }
+
+    .processo-etapa {
+      grid-template-columns: 48px 1fr;
+      gap: 30px;
+      margin-bottom: 65px;
+    }
+
+    .processo-lista::before {
+      left: 23px;
+    }
+
+    .processo-numero {
+      width: 47px;
+      height: 47px;
+    }
+
+    .processo-etapa-titulo {
+      font-size: 1.55rem;
+    }
+
+    .processo-etapa-texto {
+      font-size: 1.05rem;
+    }
+
+  }
+</style>
+
+<section class="processo" id="como-funciona">
+
+  <div class="processo-conteudo">
+
+    <div class="processo-topo">
+
+      <span class="processo-rotulo">
+        Como funciona
+      </span>
+
+      <h2 class="processo-titulo">
+        Do primeiro contato ao voo.
+      </h2>
+
+      <p class="processo-introducao">
+        Você não precisa chegar sabendo como tudo funciona.
+        Nós orientamos cada etapa para que você saiba o que esperar
+        antes de chegar à Pedra Bonita.
+      </p>
+
+    </div>
+
+    <div class="processo-lista">
+
+      <div class="processo-etapa">
+
+        <div class="processo-numero">
+          01
+        </div>
+
+        <div>
+          <h3 class="processo-etapa-titulo">
+            Entre em contato
+          </h3>
+
+          <p class="processo-etapa-texto">
+            Você informa pelo WhatsApp os dias em que tem disponibilidade
+            para realizar o voo.
+          </p>
+        </div>
+
+      </div>
+
+      <div class="processo-etapa">
+
+        <div class="processo-numero">
+          02
+        </div>
+
+        <div>
+          <h3 class="processo-etapa-titulo">
+            Encontramos o melhor momento
+          </h3>
+
+          <p class="processo-etapa-texto">
+            A equipe acompanha as condições de tempo e vento e orienta
+            sobre o melhor dia e horário para realizar o voo.
+          </p>
+        </div>
+
+      </div>
+
+      <div class="processo-etapa">
+
+        <div class="processo-numero">
+          03
+        </div>
+
+        <div>
+          <h3 class="processo-etapa-titulo">
+            Encontro e registro
+          </h3>
+
+          <p class="processo-etapa-texto">
+            No dia combinado, você encontra a equipe na sede do
+            Clube São Conrado de Voo Livre e realiza o registro necessário
+            antes de seguir para a Pedra Bonita.
+          </p>
+        </div>
+
+      </div>
+
+      <div class="processo-etapa">
+
+        <div class="processo-numero">
+          04
+        </div>
+
+        <div>
+          <h3 class="processo-etapa-titulo">
+            Preparação para o voo
+          </h3>
+
+          <p class="processo-etapa-texto">
+            O equipamento é preparado e verificado. Antes da decolagem,
+            o piloto explica os procedimentos de segurança,
+            a decolagem, o pouso e as orientações que devem ser seguidas.
+          </p>
+        </div>
+
+      </div>
+
+      <div class="processo-etapa">
+
+        <div class="processo-numero">
+          05
+        </div>
+
+        <div>
+          <h3 class="processo-etapa-titulo">
+            Voo e pouso
+          </h3>
+
+          <p class="processo-etapa-texto">
+            Com as condições adequadas, a decolagem é autorizada.
+            O piloto acompanha você durante todo o voo,
+            até o pouso na Praia do Pepino.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+    <!-- BLOCO 6 — O CÉU TAMBÉM DECIDE -->
+
+<style>
+  .ceu {
+    position: relative;
+    min-height: 720px;
+    padding: 120px 20px;
+    display: flex;
+    align-items: flex-end;
+    overflow: hidden;
+    background: #111;
+    color: #fff;
+  }
+
+  .ceu-imagem {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .ceu::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+      linear-gradient(
+        to top,
+        rgba(0, 0, 0, 0.82) 0%,
+        rgba(0, 0, 0, 0.48) 45%,
+        rgba(0, 0, 0, 0.08) 100%
+      );
+  }
+
+  .ceu-conteudo {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  .ceu-rotulo {
+    display: block;
+    margin-bottom: 20px;
+    color: #c9a15a;
+    font-size: 0.76rem;
+    font-weight: 700;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+  }
+
+  .ceu-titulo {
+    max-width: 750px;
+    margin: 0;
+    font-size: clamp(3rem, 11vw, 6.5rem);
+    line-height: 0.92;
+    letter-spacing: -0.055em;
+    font-weight: 600;
+  }
+
+  .ceu-texto {
+    max-width: 650px;
+    margin: 32px 0 0;
+    color: rgba(255, 255, 255, 0.82);
+    font-size: 1.05rem;
+    line-height: 1.8;
+  }
+
+  .ceu-destaque {
+    max-width: 650px;
+    margin: 28px 0 0;
+    padding-left: 20px;
+    border-left: 2px solid #c9a15a;
+    color: #fff;
+    font-size: 1.1rem;
+    line-height: 1.7;
+    font-weight: 500;
+  }
+
+  @media (min-width: 800px) {
+
+    .ceu {
+      min-height: 820px;
+      padding: 150px 60px;
+    }
+
+    .ceu-texto {
+      font-size: 1.1rem;
+    }
+
+    .ceu-destaque {
+      font-size: 1.2rem;
+    }
+
+  }
+</style>
+
+<section class="ceu" id="ceu">
+
+  <img
+    class="ceu-imagem"
+    src="ceu.jpg"
+    alt="Vista do céu sobre o Rio de Janeiro"
+  >
+
+  <div class="ceu-conteudo">
+
+    <span class="ceu-rotulo">
+      O céu também decide
+    </span>
+
+    <h2 class="ceu-titulo">
+      Nem todo dia é dia de voar.
+    </h2>
+
+    <p class="ceu-texto">
+      O voo livre depende das condições de tempo e vento.
+      Por isso, a equipe acompanha a previsão e as condições
+      do local para orientar você sobre o melhor momento para voar.
+    </p>
+
+    <p class="ceu-destaque">
+      As condições de voo são acompanhadas antes da decolagem. Se os requisitos mínimos para realizar o voo não forem atendidos, a decolagem não é autorizada.
+        Nesse caso, o voo pode ser reagendado para um momento mais favorável.
+    </p>
+
+  </div>
+
+</section>
+
+<!-- BLOCO 7 — ANTES DE VOAR -->
+
+<style>
+  .antes-voar {
+    background: #f4f1eb;
+    color: #151515;
+    padding: 110px 20px 120px;
+  }
+
+  .antes-voar-conteudo {
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  .antes-voar-topo {
+    max-width: 780px;
+    margin-bottom: 65px;
+  }
+
+  .antes-voar-rotulo {
+    display: block;
+    margin-bottom: 20px;
+    color: #9b7a3d;
+    font-size: 0.76rem;
+    font-weight: 700;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+  }
+
+  .antes-voar-titulo {
+    margin: 0;
+    font-size: clamp(3rem, 11vw, 6.2rem);
+    line-height: 0.93;
+    letter-spacing: -0.055em;
+    font-weight: 600;
+  }
+
+  .antes-voar-introducao {
+    max-width: 650px;
+    margin: 28px 0 0;
+    color: #555;
+    font-size: 1.05rem;
+    line-height: 1.8;
+  }
+
+  .antes-voar-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .antes-voar-item {
+    padding: 30px 26px;
+    background: #fff;
+    border: 1px solid #e2ddd4;
+  }
+
+  .antes-voar-item-titulo {
+    margin: 0 0 12px;
+    font-size: 1.2rem;
+    line-height: 1.3;
+    font-weight: 600;
+  }
+
+  .antes-voar-item-texto {
+    margin: 0;
+    color: #5c5c5c;
+    font-size: 0.98rem;
+    line-height: 1.75;
+  }
+
+  @media (min-width: 650px) {
+
+    .antes-voar-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+  }
+
+  @media (min-width: 800px) {
+
+    .antes-voar {
+      padding: 150px 60px;
+    }
+
+    .antes-voar-topo {
+      margin-bottom: 90px;
+    }
+
+    .antes-voar-grid {
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .antes-voar-item {
+      min-height: 190px;
+      padding: 34px 30px;
+    }
+
+    .antes-voar-item-titulo {
+      font-size: 1.3rem;
+    }
+
+    .antes-voar-item-texto {
+      font-size: 1rem;
+    }
+
+  }
+</style>
+
+<section class="antes-voar" id="antes-de-voar">
+
+  <div class="antes-voar-conteudo">
+
+    <div class="antes-voar-topo">
+
+      <span class="antes-voar-rotulo">
+        Antes de voar
+      </span>
+
+      <h2 class="antes-voar-titulo">
+        Algumas coisas que você precisa saber.
+      </h2>
+
+      <p class="antes-voar-introducao">
+        Para que sua experiência aconteça da melhor maneira,
+        existem alguns detalhes importantes que devem ser
+        considerados antes do voo.
+      </p>
+
+    </div>
+
+    <div class="antes-voar-grid">
+
+      <div class="antes-voar-item">
+
+        <h3 class="antes-voar-item-titulo">
+          Nunca voou?
+        </h3>
+
+        <p class="antes-voar-item-texto">
+          Não é necessário ter experiência anterior.
+          Antes da decolagem, o piloto explica
+          os procedimentos e as orientações que devem ser seguidas.
+        </p>
+
+      </div>
+
+      <div class="antes-voar-item">
+
+        <h3 class="antes-voar-item-titulo">
+          Idade
+        </h3>
+
+        <p class="antes-voar-item-texto">
+          A atividade é destinada a maiores de 18 anos.
+          Menores a partir de 14 anos podem voar com a presença
+          de um dos pais ou responsável legal durante o registro.
+        </p>
+
+      </div>
+
+      <div class="antes-voar-item">
+
+        <h3 class="antes-voar-item-titulo">
+          Peso
+        </h3>
+
+        <p class="antes-voar-item-texto">
+          Não existe um limite único de peso para todos os voos.
+          A possibilidade de realizar a atividade depende do piloto,
+          do equipamento e das condições do voo.
+        </p>
+
+      </div>
+
+      <div class="antes-voar-item">
+
+        <h3 class="antes-voar-item-titulo">
+          Calçados
+        </h3>
+
+        <p class="antes-voar-item-texto">
+          Dê preferência a calçados fechados.
+          Sandálias ou chinelos só podem ser utilizados
+          se estiverem devidamente presos aos pés.
+        </p>
+
+      </div>
+
+      <div class="antes-voar-item">
+
+        <h3 class="antes-voar-item-titulo">
+          Seus objetos
+        </h3>
+
+        <p class="antes-voar-item-texto">
+          Pequenos objetos pessoais podem ser acomodados
+          no compartimento do equipamento. Mochilas e objetos maiores
+          são conduzidos por um integrante da equipe até o local de pouso.
+        </p>
+
+      </div>
+
+      <div class="antes-voar-item">
+
+        <h3 class="antes-voar-item-titulo">
+          Como chegar
+        </h3>
+
+        <p class="antes-voar-item-texto">
+          O encontro acontece na sede do Clube São Conrado de Voo Livre.
+          As orientações sobre o local exato são enviadas pelo WhatsApp
+          no momento do agendamento.
+        </p>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- BLOCO 8 — SEGURANÇA E PREPARAÇÃO -->
+
+<style>
+  .seguranca {
+    background: #111;
+    color: #fff;
+    padding: 110px 20px 120px;
+  }
+
+  .seguranca-conteudo {
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  .seguranca-topo {
+    max-width: 800px;
+    margin-bottom: 70px;
+  }
+
+  .seguranca-rotulo {
+    display: block;
+    margin-bottom: 20px;
+    color: #c9a15a;
+    font-size: 0.76rem;
+    font-weight: 700;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+  }
+
+  .seguranca-titulo {
+    margin: 0;
+    font-size: clamp(3rem, 11vw, 6.2rem);
+    line-height: 0.93;
+    letter-spacing: -0.055em;
+    font-weight: 600;
+  }
+
+  .seguranca-introducao {
+    max-width: 680px;
+    margin: 28px 0 0;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 1.05rem;
+    line-height: 1.8;
+  }
+
+  .seguranca-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1px;
+    background: #343434;
+    border: 1px solid #343434;
+  }
+
+  .seguranca-item {
+    background: #111;
+    padding: 34px 28px;
+  }
+
+  .seguranca-numero {
+    display: block;
+    margin-bottom: 24px;
+    color: #c9a15a;
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+  }
+
+  .seguranca-item-titulo {
+    margin: 0 0 14px;
+    font-size: 1.3rem;
+    line-height: 1.3;
+    font-weight: 600;
+  }
+
+  .seguranca-item-texto {
+    margin: 0;
+    color: rgba(255, 255, 255, 0.68);
+    font-size: 0.98rem;
+    line-height: 1.8;
+  }
+
+  .seguranca-destaque {
+    margin-top: 50px;
+    padding: 32px 26px;
+    border-left: 2px solid #c9a15a;
+    background: #181818;
+  }
+
+  .seguranca-destaque p {
+    margin: 0;
+    color: #fff;
+    font-size: 1.15rem;
+    line-height: 1.7;
+    font-weight: 500;
+  }
+
+  @media (min-width: 650px) {
+
+    .seguranca-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+  }
+
+  @media (min-width: 800px) {
+
+    .seguranca {
+      padding: 150px 60px;
+    }
+
+    .seguranca-topo {
+      margin-bottom: 90px;
+    }
+
+    .seguranca-introducao {
+      font-size: 1.1rem;
+    }
+
+    .seguranca-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    .seguranca-item {
+      min-height: 250px;
+      padding: 38px 32px;
+    }
+
+    .seguranca-item-titulo {
+      font-size: 1.4rem;
+    }
+
+    .seguranca-item-texto {
+      font-size: 1rem;
+    }
+
+    .seguranca-destaque {
+      margin-top: 65px;
+      padding: 38px 34px;
+    }
+
+    .seguranca-destaque p {
+      font-size: 1.25rem;
+    }
+
+  }
+</style>
+
+<section class="seguranca" id="seguranca">
+
+  <div class="seguranca-conteudo">
+
+    <div class="seguranca-topo">
+
+      <span class="seguranca-rotulo">
+        Segurança e preparação
+      </span>
+
+      <h2 class="seguranca-titulo">
+        Antes de voar, tudo precisa estar pronto.
+      </h2>
+
+      <p class="seguranca-introducao">
+        A preparação faz parte do voo. Equipamento, condições do local
+        e procedimentos são verificados antes que a decolagem aconteça.
+      </p>
+
+    </div>
+
+    <div class="seguranca-grid">
+
+      <div class="seguranca-item">
+
+        <span class="seguranca-numero">
+          01
+        </span>
+
+        <h3 class="seguranca-item-titulo">
+          Equipamento preparado
+        </h3>
+
+        <p class="seguranca-item-texto">
+          O equipamento é montado e preparado de acordo com os
+          procedimentos da modalidade antes da decolagem.
+        </p>
+
+      </div>
+
+      <div class="seguranca-item">
+
+        <span class="seguranca-numero">
+          02
+        </span>
+
+        <h3 class="seguranca-item-titulo">
+          Equipamento verificado
+        </h3>
+
+        <p class="seguranca-item-texto">
+          Após a montagem, são realizadas as verificações necessárias
+          antes que o voo possa ser liberado.
+        </p>
+
+      </div>
+
+      <div class="seguranca-item">
+
+        <span class="seguranca-numero">
+          03
+        </span>
+
+        <h3 class="seguranca-item-titulo">
+          Orientações antes da decolagem
+        </h3>
+
+        <p class="seguranca-item-texto">
+          O piloto explica os procedimentos de segurança, a decolagem,
+          o pouso e as orientações que devem ser seguidas durante a atividade.
+        </p>
+
+      </div>
+
+      <div class="seguranca-item">
+
+        <span class="seguranca-numero">
+          04
+        </span>
+
+        <h3 class="seguranca-item-titulo">
+          Condições acompanhadas
+        </h3>
+
+        <p class="seguranca-item-texto">
+          As condições de tempo e vento são acompanhadas antes e durante
+          o processo de preparação para a decolagem.
+        </p>
+
+      </div>
+
+      <div class="seguranca-item">
+
+        <span class="seguranca-numero">
+          05
+        </span>
+
+        <h3 class="seguranca-item-titulo">
+          Liberação da decolagem
+        </h3>
+
+        <p class="seguranca-item-texto">
+          A decolagem é liberada quando as condições necessárias
+          para a realização do voo estão presentes.
+        </p>
+
+      </div>
+
+      <div class="seguranca-item">
+
+        <span class="seguranca-numero">
+          06
+        </span>
+
+        <h3 class="seguranca-item-titulo">
+          Se as condições não forem suficientes
+        </h3>
+
+        <p class="seguranca-item-texto">
+          Se as condições necessárias para realizar o voo não estiverem presentes,
+          a decolagem não é autorizada e o voo pode ser reagendado.
+        </p>
+
+      </div>
+
+    </div>
+
+    <div class="seguranca-destaque">
+
+      <p>
+        A decolagem acontece quando as condições necessárias
+        para o voo estão presentes.
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+    <!-- BLOCO 9 — REGISTROS DO VOO -->
+
+<style>
+  .registro {
+    background: #f4f1eb;
+    color: #151515;
+    padding: 85px 20px;
+  }
+
+  .registro-conteudo {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .registro-rotulo {
+    display: block;
+    margin-bottom: 18px;
+    color: #9b7a3d;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+  }
+
+  .registro-titulo {
+    margin: 0;
+    font-size: clamp(2.7rem, 10vw, 5rem);
+    line-height: 0.98;
+    letter-spacing: -0.05em;
+    font-weight: 600;
+  }
+
+  .registro-texto {
+    max-width: 680px;
+    margin: 28px auto 0;
+    color: #555;
+    font-size: 1.05rem;
+    line-height: 1.8;
+  }
+
+  .registro-destaque {
+    margin: 28px auto 0;
+    color: #151515;
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1.6;
+  }
+
+  @media (min-width: 800px) {
+
+    .registro {
+      padding: 115px 60px;
+    }
+
+    .registro-texto {
+      font-size: 1.1rem;
+    }
+
+  }
+</style>
+
+<section class="registro" id="registros">
+
+  <div class="registro-conteudo">
+
+    <span class="registro-rotulo">
+      Registros do voo
+    </span>
+
+    <h2 class="registro-titulo">
+      Um voo. Vários pontos de vista.
+    </h2>
+
+    <p class="registro-texto">
+      Registros em <strong>GoPro</strong> e <strong>360°</strong>
+      capturam a experiência do céu com diferentes perspectivas
+      e alta qualidade de imagem.
+    </p>
+
+    <p class="registro-destaque">
+      Você escolhe como quer reviver o voo.
+    </p>
+
+  </div>
+
+</section>
+
+<!-- BLOCO 10 — PERGUNTAS FREQUENTES -->
+
+<section class="faq" id="faq">
+
+    <div class="faq-conteudo">
+
+        <p class="secao-etiqueta">Perguntas frequentes</p>
+
+        <h2>Antes de voar, algumas respostas.</h2>
+
+        <div class="faq-lista">
+
+            <div class="faq-item">
+                <button class="faq-pergunta" type="button">
+                    <span>Como é definido o piloto que realizará meu voo?</span>
+                    <span class="faq-icone">+</span>
+                </button>
+
+                <div class="faq-resposta">
+                    <p>
+                        A definição do piloto é feita de acordo com a disponibilidade
+                        para a data e o horário escolhidos.
+                    </p>
+                </div>
+            </div>
+
+
+            <div class="faq-item">
+                <button class="faq-pergunta" type="button">
+                    <span>Onde será realizado o pouso?</span>
+                    <span class="faq-icone">+</span>
+                </button>
+
+                <div class="faq-resposta">
+                    <p>
+                        O pouso tem como local oficial a Praia do Pepino.
+                    </p>
+                </div>
+            </div>
+
+
+            <div class="faq-item">
+                <button class="faq-pergunta" type="button">
+                    <span>Posso realizar o voo sem estar acompanhado?</span>
+                    <span class="faq-icone">+</span>
+                </button>
+
+                <div class="faq-resposta">
+                    <p>
+                        Sim. O voo duplo é realizado exclusivamente pelo piloto
+                        e pelo passageiro.
+                    </p>
+                </div>
+            </div>
+
+
+            <div class="faq-item">
+                <button class="faq-pergunta" type="button">
+                    <span>Posso levar alguém comigo no dia do voo?</span>
+                    <span class="faq-icone">+</span>
+                </button>
+
+                <div class="faq-resposta">
+                    <p>
+                        Sim. A pessoa que estiver acompanhando você poderá seguir
+                        até a rampa de voo livre. Após a decolagem, poderá retornar
+                        acompanhada por um integrante da equipe.
+                    </p>
+                </div>
+            </div>
+
+
+            <div class="faq-item">
+                <button class="faq-pergunta" type="button">
+                    <span>Quando o pagamento é realizado?</span>
+                    <span class="faq-icone">+</span>
+                </button>
+
+                <div class="faq-resposta">
+                    <p>
+                        O pagamento é realizado após o voo.
+                    </p>
+                </div>
+            </div>
+
+
+            <div class="faq-item">
+                <button class="faq-pergunta" type="button">
+                    <span>Quais formas de pagamento são aceitas?</span>
+                    <span class="faq-icone">+</span>
+                </button>
+
+                <div class="faq-resposta">
+                    <p>
+                        São aceitos pagamentos por Pix, dinheiro ou cartão
+                        de crédito e débito.
+                    </p>
+                </div>
+            </div>
+
+
+            <div class="faq-item">
+                <button class="faq-pergunta" type="button">
+                    <span>As gravações são entregues no mesmo dia?</span>
+                    <span class="faq-icone">+</span>
+                </button>
+
+                <div class="faq-resposta">
+                    <p>
+                        Sim. Pouco depois do pouso, as gravações disponíveis
+                        são apresentadas para que você possa assisti-las
+                        e escolher quais deseja levar.
+                    </p>
+                </div>
+            </div>
+
+
+            <div class="faq-item">
+                <button class="faq-pergunta" type="button">
+                    <span>Posso realizar o voo em uma data comemorativa ou ocasião especial?</span>
+                    <span class="faq-icone">+</span>
+                </button>
+
+                <div class="faq-resposta">
+                    <p>
+                        Sim. O voo pode ser realizado em qualquer dia em que
+                        as condições sejam favoráveis à prática do esporte.
+                    </p>
+                </div>
+            </div>
+
+
+            <div class="faq-item">
+                <button class="faq-pergunta" type="button">
+                    <span>Preciso morar no Rio de Janeiro para realizar o voo?</span>
+                    <span class="faq-icone">+</span>
+                </button>
+
+                <div class="faq-resposta">
+                    <p>
+                        Não. O Voa Rio! recebe pessoas de outras cidades,
+                        estados e também de outros países.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<style>
+
+/* ========================================
+   BLOCO 10 — FAQ
+======================================== */
+
+.faq {
+    padding: 100px 20px;
+    background: #f5f3ee;
+    color: #111;
+}
+
+.faq-conteudo {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.faq .secao-etiqueta {
+    margin-bottom: 14px;
+    font-size: 12px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-weight: 600;
+    opacity: 0.65;
+}
+
+.faq h2 {
+    margin: 0 0 50px;
+    font-size: clamp(32px, 6vw, 52px);
+    line-height: 1.08;
+    font-weight: 500;
+    letter-spacing: -1.5px;
+}
+
+.faq-lista {
+    border-top: 1px solid rgba(17, 17, 17, 0.18);
+}
+
+.faq-item {
+    border-bottom: 1px solid rgba(17, 17, 17, 0.18);
+}
+
+.faq-pergunta {
+    width: 100%;
+    padding: 25px 4px;
+    border: 0;
+    background: transparent;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 20px;
+
+    text-align: left;
+
+    font: inherit;
+    font-size: 18px;
+    line-height: 1.4;
+
+    color: #111;
+
+    cursor: pointer;
+}
+
+.faq-pergunta span:first-child {
+    max-width: 800px;
+}
+
+.faq-icone {
+    flex-shrink: 0;
+
+    width: 28px;
+    height: 28px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 25px;
+    font-weight: 300;
+
+    transition: transform 0.3s ease;
+}
+
+.faq-item.aberto .faq-icone {
+    transform: rotate(45deg);
+}
+
+
+/* RESPOSTAS */
+
+.faq-resposta {
+    max-height: 0;
+    overflow: hidden;
+
+    opacity: 0;
+
+    padding-bottom: 0;
+
+    transition:
+        max-height 0.4s ease,
+        opacity 0.3s ease,
+        padding-bottom 0.4s ease;
+}
+
+.faq-resposta p {
+    max-width: 760px;
+
+    margin: 0;
+
+    padding: 0 45px 0 4px;
+
+    font-size: 16px;
+    line-height: 1.7;
+
+    color: rgba(17, 17, 17, 0.72);
+}
+
+.faq-item.aberto .faq-resposta {
+    opacity: 1;
+    padding-bottom: 26px;
+}
+
+
+/* ========================================
+   BLOCO 11 — CTA FINAL
+======================================== */
+
+.cta-final {
+    padding: 120px 20px;
+    background: #111;
+    color: #fff;
+    text-align: center;
+}
+
+.cta-final-conteudo {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.cta-final h2 {
+    margin: 0 0 24px;
+    font-size: clamp(34px, 7vw, 58px);
+    line-height: 1.05;
+    font-weight: 500;
+    letter-spacing: -1.8px;
+}
+
+.cta-final p {
+    max-width: 600px;
+    margin: 0 auto 36px;
+    font-size: 17px;
+    line-height: 1.7;
+    color: rgba(255, 255, 255, 0.72);
+}
+
+.cta-final .chamada-botao {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 15px 25px;
+
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    border-radius: 999px;
+
+    background: #fff;
+    color: #111;
+
+    text-decoration: none;
+
+    font-size: 15px;
+    font-weight: 600;
+
+    transition:
+        transform 0.25s ease,
+        background 0.25s ease;
+}
+
+.cta-final .chamada-botao:hover {
+    transform: translateY(-2px);
+    background: #f0eee9;
+}
+
+
+/* ========================================
+   RESPONSIVIDADE
+======================================== */
+
+@media (max-width: 600px) {
+
+    .faq {
+        padding: 75px 20px;
+    }
+
+    .faq h2 {
+        margin-bottom: 35px;
+    }
+
+    .faq-pergunta {
+        padding: 22px 0;
+        font-size: 17px;
+    }
+
+    .faq-resposta p {
+        padding-left: 0;
+        padding-right: 25px;
+        font-size: 15px;
+    }
+
+    .cta-final {
+        padding: 90px 20px;
+    }
+
+    .cta-final h2 {
+        font-size: 38px;
+    }
+
+}
+
+</style>
+
+
+<script>
+
+/* ========================================
+   FAQ — ABRIR E FECHAR
+======================================== */
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    const perguntas = document.querySelectorAll(".faq-pergunta");
+
+    perguntas.forEach(function (pergunta) {
+
+        pergunta.addEventListener("click", function () {
+
+            const item = this.closest(".faq-item");
+            const resposta = item.querySelector(".faq-resposta");
+
+            const estavaAberto = item.classList.contains("aberto");
+
+
+            /* Fecha todos */
+
+            document.querySelectorAll(".faq-item").forEach(function (outroItem) {
+
+                outroItem.classList.remove("aberto");
+
+                const outraResposta =
+                    outroItem.querySelector(".faq-resposta");
+
+                outraResposta.style.maxHeight = "0px";
+                outraResposta.style.opacity = "0";
+                outraResposta.style.paddingBottom = "0px";
+
+            });
+
+
+            /* Abre somente se estava fechado */
+
+            if (!estavaAberto) {
+
+                item.classList.add("aberto");
+
+                resposta.style.maxHeight =
+                    resposta.scrollHeight + "px";
+
+                resposta.style.opacity = "1";
+
+                resposta.style.paddingBottom = "26px";
+
+            }
+
+        });
+
+    });
+
+});
+
+</script>
+
+
+<!-- BLOCO 11 — CHAMADA FINAL -->
+
+<section class="cta-final">
+
+    <div class="cta-final-conteudo">
+
+        <h2>
+            Pronto para conhecer o Rio de outro ponto de vista?
+        </h2>
+
+        <p>
+            Fale com a nossa equipe para saber mais e agendar seu voo.
+        </p>
+
+        <a
+            class="chamada-botao"
+            href="https://wa.me/5521975899356?text=Ol%C3%A1!%20Tenho%20algumas%20d%C3%BAvidas%20sobre%20os%20voos%20do%20Voa%20Rio!%20e%20gostaria%20de%20saber%20mais%20ou%20agendar%20meu%20voo."
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+            Mais informações e agendamento
+        </a>
+
+    </div>
+
+</section>
+
+    <!-- RODAPÉ -->
+<footer class="rodape">
+  <div class="rodape-conteudo">
+    <div class="rodape-marca">
+      <h2>Voa Rio!</h2>
+      <p>O Rio aos seus pés. O céu à sua frente.</p>
+    </div>
+  </div>
+
+  <div class="rodape-base">
+    <p>Voa Rio!</p>
+    <p>Conheça o Rio pelo céu.</p>
+  </div>
+</footer>
+
+
+<!-- ABA FLUTUANTE DO WHATSAPP -->
+<a
+  class="whatsapp-flutuante"
+  href="https://wa.me/5521975899356?text=Ol%C3%A1!%20Tenho%20algumas%20d%C3%BAvidas%20sobre%20os%20voos%20do%20Voa%20Rio!%20e%20gostaria%20de%20saber%20mais%20ou%20agendar%20meu%20voo."
+  target="_blank"
+  rel="noopener noreferrer"
+  aria-label="Fale conosco pelo WhatsApp"
+>
+  <svg
+    viewBox="0 0 24 24"
+    aria-hidden="true"
+  >
+    <path
+      d="M20.52 3.48A11.87 11.87 0 0 0 12.06 0C5.5 0 .16 5.34.16 11.9c0 2.1.55 4.15 1.6 5.96L.05 24l6.28-1.65a11.9 11.9 0 0 0 5.73 1.46h.01c6.56 0 11.9-5.34 11.9-11.9 0-3.18-1.24-6.17-3.45-8.43ZM12.06 21.8h-.01a9.9 9.9 0 0 1-5.05-1.38l-.36-.21-3.73.98 1-3.64-.23-.37a9.9 9.9 0 0 1-1.52-5.28C2.16 6.44 6.6 2 12.06 2a9.87 9.87 0 0 1 7.03 2.92 9.88 9.88 0 0 1 2.91 7.04c0 5.46-4.44 9.9-9.94 9.9Zm5.43-7.42c-.3-.15-1.77-.87-2.05-.97-.28-.1-.48-.15-.68.15-.2.3-.78.97-.96 1.17-.18.2-.35.22-.65.07-.3-.15-1.25-.46-2.39-1.48-.88-.79-1.48-1.76-1.65-2.06-.17-.3-.02-.46.13-.61.14-.14.3-.35.45-.52.15-.18.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.68-1.63-.93-2.23-.25-.6-.5-.52-.68-.53h-.58c-.2 0-.52.07-.8.37-.28.3-1.05 1.03-1.05 2.5s1.08 2.9 1.23 3.1c.15.2 2.12 3.24 5.14 4.55.72.31 1.28.5 1.72.64.72.23 1.37.2 1.89.12.58-.09 1.77-.72 2.02-1.42.25-.7.25-1.3.18-1.42-.07-.12-.27-.2-.57-.35Z"
+    />
+  </svg>
+
+  <span>Fale conosco</span>
+</a>
+
+
+<style>
+/* ==============================
+   RODAPÉ
+   ============================== */
+
+.rodape {
+  background: #0d0d0d;
+  color: #ffffff;
+  padding: 70px 24px 24px;
+}
+
+.rodape-conteudo {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.rodape-marca h2 {
+  margin: 0 0 10px;
+  font-size: 30px;
+  font-weight: 600;
+  letter-spacing: -0.5px;
+}
+
+.rodape-marca p {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.65);
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.rodape-base {
+  max-width: 1100px;
+  margin: 55px auto 0;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.rodape-base p {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.45);
+  font-size: 12px;
+}
+
+
+/* ==============================
+   ABA FLUTUANTE DO WHATSAPP
+   ============================== */
+
+.whatsapp-flutuante {
+  position: fixed;
+  right: 18px;
+  bottom: 18px;
+  z-index: 9999;
+
+  display: flex;
+  align-items: center;
+  gap: 9px;
+
+  padding: 13px 17px;
+  border-radius: 999px;
+
+  background: #111111;
+  color: #ffffff;
+
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.22);
+
+  transition:
+    opacity 0.25s ease,
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.whatsapp-flutuante svg {
+  width: 20px;
+  height: 20px;
+  fill: #25D366;
+  flex-shrink: 0;
+}
+
+.whatsapp-flutuante:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 11px 34px rgba(0, 0, 0, 0.28);
+}
+
+.whatsapp-flutuante.oculta {
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(10px);
+}
+
+
+/* ==============================
+   CELULAR
+   ============================== */
+
+@media (max-width: 600px) {
+
+  .rodape {
+    padding: 55px 20px 22px;
+  }
+
+  .rodape-base {
+    margin-top: 45px;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .whatsapp-flutuante {
+    right: 14px;
+    bottom: 14px;
+    padding: 13px 15px;
+  }
+}
+</style>
+
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+  const abaWhatsApp = document.querySelector(".whatsapp-flutuante");
+
+  const botoesWhatsApp = document.querySelectorAll(
+    ".botao-cabecalho, .botao-hero, .chamada-botao"
+  );
+
+  if (!abaWhatsApp || !botoesWhatsApp.length) {
+    return;
+  }
+
+  const elementosVisiveis = new Set();
+
+  const observador = new IntersectionObserver(
+    function (entradas) {
+
+      entradas.forEach(function (entrada) {
+
+        if (entrada.isIntersecting) {
+          elementosVisiveis.add(entrada.target);
+        } else {
+          elementosVisiveis.delete(entrada.target);
+        }
+
+      });
+
+      if (elementosVisiveis.size > 0) {
+        abaWhatsApp.classList.add("oculta");
+      } else {
+        abaWhatsApp.classList.remove("oculta");
+      }
+
+    },
+    {
+      threshold: 0.15
+    }
+  );
+
+  botoesWhatsApp.forEach(function (botao) {
+    observador.observe(botao);
+  });
+
+});
+</script>
+
+<script src="js/idioma.js"></script>
+    
+</body>
+
+</html>
