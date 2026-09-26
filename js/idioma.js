@@ -19,11 +19,16 @@ function atualizarIdiomaAtivo() {
     const idiomaAtual = idiomaDaPagina();
 
     document.querySelectorAll("[data-idioma]").forEach((botao) => {
-        botao.classList.toggle(
-            "idioma-ativo",
-            botao.dataset.idioma === idiomaAtual
-        );
+        botao.classList.remove("idioma-ativo");
     });
+
+    const botaoAtual = document.querySelector(
+        `[data-idioma="${idiomaAtual}"]`
+    );
+
+    if (botaoAtual) {
+        botaoAtual.classList.add("idioma-ativo");
+    }
 }
 
 function paginaAtual() {
