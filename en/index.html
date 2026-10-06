@@ -1,0 +1,2426 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="Voa Rio! — Rio at your feet. The sky ahead of you." name="description"/>
+<meta content="#0b1118" name="theme-color"/>
+<title>Voa Rio! | Rio at your feet. The sky ahead of you.</title>
+<link href="../style.css" rel="stylesheet"/>
+
+
+<style>
+
+        /* ==============================
+           CONFIGURAÇÕES GERAIS
+        ============================== */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+
+        body {
+            margin: 0;
+
+            background: #0b1118;
+
+            color: #ffffff;
+
+            font-family:
+                Arial,
+                Helvetica,
+                sans-serif;
+        }
+
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+
+        /* ==============================
+           CABEÇALHO
+        ============================== */
+
+        .cabecalho {
+            position: absolute;
+
+            top: 0;
+            left: 0;
+
+            width: 100%;
+
+            padding: 22px 20px;
+
+            z-index: 20;
+        }
+
+
+        .cabecalho-conteudo {
+            width: 100%;
+
+            max-width: 1200px;
+
+            margin: 0 auto;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: space-between;
+        }
+
+        .seletor-idioma {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    padding: 4px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(10px);
+}
+
+.seletor-idioma button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    border: none;
+    background: transparent;
+    color: #ffffff;
+    padding: 7px 9px;
+    border-radius: 999px;
+    font-size: 12px;
+    font-weight: 700;
+    cursor: pointer;
+    transition:
+        background 0.2s ease,
+        transform 0.2s ease;
+}
+
+.seletor-idioma button:hover {
+    background: rgba(255, 255, 255, 0.14);
+    transform: translateY(-1px);
+}
+
+.seletor-idioma .bandeira {
+    font-size: 16px;
+    line-height: 1;
+}
+
+.seletor-idioma .idioma-ativo {
+    background: rgba(255, 255, 255, 0.18);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.12);
+}
+        
+        .logo {
+            font-size: 26px;
+
+            font-weight: 700;
+
+            letter-spacing: -1px;
+
+            color: #ffffff;
+        }
+
+
+        .botao-cabecalho {
+            display: inline-flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            min-height: 48px;
+
+            padding: 0 21px;
+
+            border-radius: 999px;
+
+            background: #ffffff;
+
+            color: #101820;
+
+            font-size: 14px;
+
+            font-weight: 700;
+        }
+
+
+        /* ==============================
+           HERO
+        ============================== */
+
+        .hero {
+            position: relative;
+
+            min-height: 100vh;
+            min-height: 100svh;
+
+            display: flex;
+
+            align-items: flex-end;
+
+            overflow: hidden;
+
+            background:
+                linear-gradient(
+                    to bottom,
+                    rgba(7, 15, 23, 0.15),
+                    rgba(7, 15, 23, 0.25) 40%,
+                    rgba(7, 15, 23, 0.92) 100%
+                ),
+                url("hero.jpg")
+                center center
+                / cover
+                no-repeat;
+        }
+
+
+        .hero-conteudo {
+            position: relative;
+
+            z-index: 5;
+
+            width: 100%;
+
+            max-width: 1200px;
+
+            margin: 0 auto;
+
+            padding:
+                0
+                20px
+                70px;
+
+            color: #ffffff;
+        }
+
+
+        .hero-rotulo {
+            margin-bottom: 15px;
+
+            color: rgba(255, 255, 255, 0.85);
+
+            font-size: 12px;
+
+            font-weight: 700;
+
+            letter-spacing: 2.5px;
+
+            text-transform: uppercase;
+        }
+
+
+        .hero-titulo {
+            max-width: 850px;
+
+            margin-bottom: 25px;
+
+            color: #ffffff;
+
+            font-size:
+                clamp(
+                    54px,
+                    15vw,
+                    105px
+                );
+
+            font-weight: 700;
+
+            line-height: 0.9;
+
+            letter-spacing: -5px;
+        }
+
+
+        .hero-slogan {
+            max-width: 600px;
+
+            margin-bottom: 32px;
+
+            color: #ffffff;
+
+            font-size:
+                clamp(
+                    21px,
+                    5.5vw,
+                    30px
+                );
+
+            font-weight: 400;
+
+            line-height: 1.35;
+        }
+
+
+        .botao-hero {
+            display: inline-flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            min-height: 52px;
+
+            padding: 0 24px;
+
+            border-radius: 999px;
+
+            background: #ffffff;
+
+            color: #101820;
+
+            font-size: 15px;
+
+            font-weight: 700;
+        }
+
+
+        /* ==============================
+           TELAS MAIORES
+        ============================== */
+
+        @media (min-width: 768px) {
+
+            .cabecalho {
+                padding:
+                    28px
+                    35px;
+            }
+
+
+            .hero-conteudo {
+                padding:
+                    0
+                    35px
+                    95px;
+            }
+
+
+            .logo {
+                font-size: 28px;
+            }
+
+
+            .botao-cabecalho {
+                min-height: 50px;
+
+                padding:
+                    0
+                    23px;
+            }
+
+        }
+
+    </style>
+
+</head>
+<body>
+<!-- ==============================
+         CABEÇALHO
+    ============================== -->
+<header class="cabecalho">
+<div class="cabecalho-conteudo">
+<a class="logo" href="#inicio">
+        Voa Rio!
+    </a>
+<div class="seletor-idioma">
+<button data-idioma="pt" type="button">
+<span class="bandeira">🇧🇷</span>
+<span>PT</span>
+</button>
+<button data-idioma="en" type="button">
+<span class="bandeira">🇺🇸</span>
+<span>EN</span>
+</button>
+<button data-idioma="es" type="button">
+<span class="bandeira">🇪🇸</span>
+<span>ES</span>
+</button>
+</div>
+</div>
+</header>
+<!-- ==============================
+         ABERTURA
+    ============================== -->
+<main>
+<section class="hero" id="inicio">
+<div class="hero-conteudo">
+<p class="hero-rotulo">
+                    Free flight in Rio de Janeiro
+                </p>
+<h1 class="hero-titulo">
+                    Voa Rio!
+                </h1>
+<p class="hero-slogan">
+                    Rio at your feet.<br/>
+                    The sky ahead of you.
+                </p>
+<a class="botao-hero" href="https://wa.me/5521975899356?text=Hello%21+I+have+some+questions+about+Voa+Rio%21+flights+and+would+like+to+learn+more+or+book+my+flight.">
+                    I want to fly
+                </a>
+</div>
+</section>
+<!-- ==============================
+             MODALIDADES
+        ============================== -->
+<section class="modalidades" id="modalidades">
+<div class="modalidades-introducao">
+<p class="modalidades-rotulo">
+                    Two ways to fly
+                </p>
+<h2 class="modalidades-titulo">
+                    Choose how you want to experience Rio from the sky.
+                </h2>
+<p class="modalidades-texto">
+                    At Pedra Bonita, two activities let you experience free flight in different ways: hang gliding and paragliding.
+                </p>
+</div>
+<div class="modalidades-lista">
+<!-- ==========================
+                     CARD ASA-DELTA
+                =========================== -->
+<article class="modalidade modalidade-asa">
+<div class="modalidade-imagem">
+<img alt="Voo duplo de asa-delta na Pedra Bonita" src="../asa-delta.jpg"/>
+</div>
+<div class="modalidade-conteudo">
+<p class="modalidade-rotulo">
+                            Hang gliding
+                        </p>
+<h3>
+                            A classic way to experience Rio from the sky.
+                        </h3>
+<p>
+                            The experience begins at Pedra Bonita and heads toward São Conrado, accompanied by an instructor pilot throughout the flight.
+                        </p>
+<a class="modalidade-link" href="../asa-delta.html">
+                            Learn more
+                            <span>→</span>
+</a>
+</div>
+</article>
+<!-- ==========================
+                     CARD PARAPENTE
+                =========================== -->
+<article class="modalidade modalidade-parapente">
+<div class="modalidade-imagem">
+<img alt="Voo duplo de parapente na Pedra Bonita" src="../parapente.jpg"/>
+</div>
+<div class="modalidade-conteudo">
+<p class="modalidade-rotulo">
+                            Paragliding
+                        </p>
+<h3>
+                            Another way to take off from Pedra Bonita.
+                        </h3>
+<p>
+                            On a tandem paragliding flight, you take off from Pedra Bonita with an instructor pilot and experience São Conrado from a new perspective.
+                        </p>
+<a class="modalidade-link" href="../parapente.html">
+                            Learn more
+                            <span>→</span>
+</a>
+</div>
+</article>
+</div>
+</section>
+<!-- ==============================
+             ESTILO — MODALIDADES
+        ============================== -->
+</main>
+<style>
+
+            .modalidades {
+                padding: 95px 20px;
+
+                background: #f4f5f3;
+
+                color: #111820;
+            }
+
+
+            .modalidades-introducao {
+                width: 100%;
+
+                max-width: 900px;
+
+                margin: 0 auto 55px;
+            }
+
+
+            .modalidades-rotulo {
+                margin-bottom: 16px;
+
+                color: #68737c;
+
+                font-size: 12px;
+
+                font-weight: 700;
+
+                letter-spacing: 2.2px;
+
+                text-transform: uppercase;
+            }
+
+
+            .modalidades-titulo {
+                max-width: 850px;
+
+                margin-bottom: 24px;
+
+                font-size:
+                    clamp(
+                        35px,
+                        8vw,
+                        64px
+                    );
+
+                line-height: 1.02;
+
+                letter-spacing: -2.5px;
+            }
+
+
+            .modalidades-texto {
+                max-width: 680px;
+
+                color: #59636c;
+
+                font-size: 18px;
+
+                line-height: 1.7;
+            }
+
+
+            /* ==========================
+               LISTA DE CARDS
+            =========================== */
+
+            .modalidades-lista {
+                width: 100%;
+
+                max-width: 1200px;
+
+                margin: 0 auto;
+
+                display: flex;
+
+                flex-direction: column;
+
+                gap: 28px;
+            }
+
+
+            /* ==========================
+               CARD
+            =========================== */
+
+            .modalidade {
+                overflow: hidden;
+
+                border-radius: 28px;
+
+                background: #101820;
+
+                color: #ffffff;
+            }
+
+
+            .modalidade-imagem {
+                width: 100%;
+
+                aspect-ratio: 4 / 3;
+
+                overflow: hidden;
+            }
+
+
+            .modalidade-imagem img {
+                width: 100%;
+
+                height: 100%;
+
+                object-fit: cover;
+            }
+
+
+            .modalidade-conteudo {
+                padding: 32px 25px 35px;
+            }
+
+
+            .modalidade-rotulo {
+                margin-bottom: 13px;
+
+                color: #c99b32;
+
+                font-size: 12px;
+
+                font-weight: 700;
+
+                letter-spacing: 2.5px;
+
+                text-transform: uppercase;
+            }
+
+
+            .modalidade-conteudo h3 {
+                max-width: 650px;
+
+                margin-bottom: 18px;
+
+                color: #ffffff;
+
+                font-size:
+                    clamp(
+                        29px,
+                        7vw,
+                        48px
+                    );
+
+                line-height: 1.05;
+
+                letter-spacing: -1.5px;
+            }
+
+
+            .modalidade-conteudo > p:not(.modalidade-rotulo) {
+                max-width: 650px;
+
+                margin-bottom: 28px;
+
+                color: rgba(255, 255, 255, 0.72);
+
+                font-size: 16px;
+
+                line-height: 1.7;
+            }
+
+
+            /* ==========================
+               LINK
+            =========================== */
+
+            .modalidade-link {
+                display: inline-flex;
+
+                align-items: center;
+
+                gap: 9px;
+
+                padding-bottom: 5px;
+
+                border-bottom:
+                    1px solid
+                    rgba(255, 255, 255, 0.5);
+
+                color: #ffffff;
+
+                font-size: 15px;
+
+                font-weight: 700;
+            }
+
+
+            .modalidade-link span {
+                font-size: 20px;
+
+                line-height: 1;
+            }
+
+
+            /* ==========================
+               TELAS MAIORES
+            =========================== */
+
+            @media (min-width: 768px) {
+
+                .modalidades {
+                    padding:
+                        140px
+                        35px;
+                }
+
+
+                .modalidades-lista {
+                    display: grid;
+
+                    grid-template-columns:
+                        1fr
+                        1fr;
+
+                    align-items: stretch;
+
+                    gap: 28px;
+                }
+
+
+                .modalidade-asa
+                .modalidade-imagem {
+                    aspect-ratio: 16 / 10;
+                }
+
+
+                .modalidade-parapente {
+                    margin-top: 0;
+                }
+
+
+                .modalidade-parapente
+                .modalidade-imagem {
+                    aspect-ratio: 16 / 10;
+                }
+
+
+                .modalidade-conteudo {
+                    padding:
+                        38px
+                        35px
+                        42px;
+                }
+
+            }
+
+        </style>
+
+<!-- BLOCO 3 — UMA NOVA PERSPECTIVA -->
+<section class="perspectiva" id="perspectiva">
+<div class="perspectiva-imagem">
+<img alt="Vista do Rio de Janeiro a partir da Pedra Bonita" src="../perspectiva.jpg"/>
+</div>
+<div class="perspectiva-conteudo">
+<div class="perspectiva-linha"></div>
+<span class="perspectiva-rotulo">
+      A new perspective
+    </span>
+<h2 class="perspectiva-titulo">
+      Have you ever imagined seeing Rio like this?
+    </h2>
+<p class="perspectiva-texto">
+      From Pedra Bonita, mountains, sea, and city come together in a landscape that takes on another dimension from above.
+    </p>
+<p class="perspectiva-texto">
+      The flight heads toward São Conrado, revealing Rio from a perspective that cannot be seen from the ground.
+    </p>
+<p class="perspectiva-destaque">
+      Maybe your next perspective will be the sky.
+    </p>
+</div>
+</section>
+<style>
+  .perspectiva {
+    position: relative;
+    background: #111;
+    color: #fff;
+    overflow: hidden;
+    padding: 0 0 110px;
+  }
+
+  .perspectiva-imagem {
+    position: relative;
+    width: 100%;
+    height: 88vh;
+    min-height: 600px;
+    overflow: hidden;
+  }
+
+  .perspectiva-imagem img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transform: scale(1.02);
+  }
+
+  .perspectiva-imagem::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+      linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.02) 20%,
+        rgba(0, 0, 0, 0.08) 45%,
+        rgba(0, 0, 0, 0.75) 100%
+      );
+  }
+
+  .perspectiva-conteudo {
+    position: relative;
+    z-index: 2;
+    width: calc(100% - 32px);
+    max-width: 1050px;
+    margin: -120px auto 0;
+    padding: 48px 28px 55px;
+    background: #f4f1eb;
+    color: #151515;
+    box-shadow: 0 25px 70px rgba(0, 0, 0, 0.28);
+  }
+
+  .perspectiva-linha {
+    width: 55px;
+    height: 3px;
+    margin-bottom: 25px;
+    background: #b18a4a;
+  }
+
+  .perspectiva-rotulo {
+    display: block;
+    margin-bottom: 20px;
+    color: #9b7a3d;
+    font-size: 0.76rem;
+    font-weight: 700;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+  }
+
+  .perspectiva-titulo {
+    margin: 0 0 30px;
+    max-width: 900px;
+    font-size: clamp(3rem, 12vw, 7rem);
+    line-height: 0.92;
+    letter-spacing: -0.055em;
+    font-weight: 600;
+  }
+
+  .perspectiva-texto {
+    max-width: 720px;
+    margin: 0 0 20px;
+    color: #4b4b4b;
+    font-size: 1.08rem;
+    line-height: 1.85;
+  }
+
+  .perspectiva-destaque {
+    max-width: 700px;
+    margin: 42px 0 0;
+    padding-top: 30px;
+    border-top: 1px solid #d8d2c7;
+    color: #151515;
+    font-size: 1.3rem;
+    line-height: 1.55;
+    font-weight: 600;
+  }
+
+  @media (min-width: 800px) {
+
+    .perspectiva {
+      padding-bottom: 150px;
+    }
+
+    .perspectiva-imagem {
+      height: 88vh;
+      min-height: 720px;
+    }
+
+    .perspectiva-conteudo {
+      width: calc(100% - 80px);
+      margin-top: -160px;
+      padding: 75px 80px 80px;
+    }
+
+    .perspectiva-titulo {
+      margin-bottom: 38px;
+    }
+
+    .perspectiva-texto {
+      font-size: 1.12rem;
+    }
+
+    .perspectiva-destaque {
+      font-size: 1.45rem;
+    }
+  }
+</style>
+
+<!-- BLOCO 4 — NOSSA HISTÓRIA -->
+<section class="historia" id="historia">
+<div class="historia-conteudo">
+<div class="historia-topo">
+<span class="historia-rotulo">
+        Our story
+      </span>
+<h2 class="historia-titulo">
+        Flight is part of our story.
+      </h2>
+</div>
+<div class="historia-corpo">
+<div class="historia-imagem">
+<img alt="Pedra Bonita e a paisagem do Rio de Janeiro" src="../historia.jpg"/>
+</div>
+<div class="historia-texto">
+<p class="historia-abertura">
+          The sky has always been part of our landscape.
+        </p>
+<p class="historia-paragrafo">
+          For those who come to Pedra Bonita to discover free flight, that place can be the beginning of an experience. For us, it is also part of our story.
+        </p>
+<p class="historia-paragrafo">
+          We live in Pedra Bonita and are part of a traditional family from the area, where our connection with free flight has been passed down through generations.
+        </p>
+<p class="historia-paragrafo">
+          Voa Rio! was born from this connection with the place, with flight, and with our own story.
+        </p>
+<p class="historia-assinatura">
+          Experience Rio from the sky, through the eyes of those who live here.
+        </p>
+</div>
+</div>
+</div>
+</section>
+<style>
+  .historia {
+    background: #111;
+    color: #fff;
+    padding: 100px 20px 110px;
+    overflow: hidden;
+  }
+
+  .historia-conteudo {
+    max-width: 1150px;
+    margin: 0 auto;
+  }
+
+  .historia-topo {
+    max-width: 850px;
+    margin-bottom: 55px;
+  }
+
+  .historia-rotulo {
+    display: block;
+    margin-bottom: 20px;
+    color: #c7a15a;
+    font-size: 0.76rem;
+    font-weight: 700;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+  }
+
+  .historia-titulo {
+    margin: 0;
+    font-size: clamp(3rem, 11vw, 6.5rem);
+    line-height: 0.93;
+    letter-spacing: -0.055em;
+    font-weight: 600;
+  }
+
+  .historia-corpo {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 45px;
+    align-items: start;
+  }
+
+  .historia-imagem {
+    width: 100%;
+    height: 430px;
+    overflow: hidden;
+  }
+
+  .historia-imagem img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  .historia-texto {
+    max-width: 650px;
+  }
+
+  .historia-abertura {
+    margin: 0 0 28px;
+    font-size: 1.35rem;
+    line-height: 1.55;
+    font-weight: 500;
+  }
+
+  .historia-paragrafo {
+    margin: 0 0 21px;
+    color: rgba(255, 255, 255, 0.72);
+    font-size: 1rem;
+    line-height: 1.85;
+  }
+
+  .historia-assinatura {
+    position: relative;
+    margin: 42px 0 0;
+    padding: 28px 0 0 22px;
+    border-top: 1px solid rgba(255, 255, 255, 0.16);
+    color: #fff;
+    font-size: 1.15rem;
+    line-height: 1.6;
+    font-weight: 600;
+  }
+
+  .historia-assinatura::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 28px;
+    width: 2px;
+    height: 55px;
+    background: #c7a15a;
+  }
+
+  @media (min-width: 800px) {
+
+    .historia {
+      padding: 150px 60px;
+    }
+
+    .historia-topo {
+      margin-bottom: 85px;
+    }
+
+    .historia-corpo {
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 90px;
+      align-items: center;
+    }
+
+    .historia-imagem {
+      height: 620px;
+    }
+
+    .historia-abertura {
+      font-size: 1.5rem;
+    }
+
+    .historia-paragrafo {
+      font-size: 1.05rem;
+    }
+
+  }
+</style>
+
+<!-- BLOCO 5 — COMO FUNCIONA -->
+<section class="processo" id="como-funciona">
+<div class="processo-conteudo">
+<div class="processo-topo">
+<span class="processo-rotulo">
+        How it works
+      </span>
+<h2 class="processo-titulo">
+        From the first contact to the flight.
+      </h2>
+<p class="processo-introducao">
+        You do not need to know how everything works when you arrive. We guide you through every step so you know what to expect before coming to Pedra Bonita.
+      </p>
+</div>
+<div class="processo-lista">
+<div class="processo-etapa">
+<div class="processo-numero">
+          01
+        </div>
+<div>
+<h3 class="processo-etapa-titulo">
+            Get in touch
+          </h3>
+<p class="processo-etapa-texto">
+            You let us know via WhatsApp which days you are available to fly.
+          </p>
+</div>
+</div>
+<div class="processo-etapa">
+<div class="processo-numero">
+          02
+        </div>
+<div>
+<h3 class="processo-etapa-titulo">
+            We find the best time
+          </h3>
+<p class="processo-etapa-texto">
+            The team monitors the weather and wind conditions and advises you on the best day and time to fly.
+          </p>
+</div>
+</div>
+<div class="processo-etapa">
+<div class="processo-numero">
+          03
+        </div>
+<div>
+<h3 class="processo-etapa-titulo">
+            Meeting and registration
+          </h3>
+<p class="processo-etapa-texto">
+            On the agreed day, you meet the team at the Clube São Conrado de Voo Livre headquarters and complete the necessary registration before heading to Pedra Bonita.
+          </p>
+</div>
+</div>
+<div class="processo-etapa">
+<div class="processo-numero">
+          04
+        </div>
+<div>
+<h3 class="processo-etapa-titulo">
+            Flight preparation
+          </h3>
+<p class="processo-etapa-texto">
+            The equipment is prepared and checked. Before takeoff, the pilot explains the safety procedures, takeoff, landing, and the instructions you must follow.
+          </p>
+</div>
+</div>
+<div class="processo-etapa">
+<div class="processo-numero">
+          05
+        </div>
+<div>
+<h3 class="processo-etapa-titulo">
+            Flight and landing
+          </h3>
+<p class="processo-etapa-texto">
+            When conditions are suitable, takeoff is authorized. The pilot accompanies you throughout the flight until landing at Praia do Pepino.
+          </p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<style>
+  .processo {
+    background: #f4f1eb;
+    color: #151515;
+    padding: 100px 20px 120px;
+    overflow: hidden;
+  }
+
+  .processo-conteudo {
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  .processo-topo {
+    max-width: 800px;
+    margin-bottom: 70px;
+  }
+
+  .processo-rotulo {
+    display: block;
+    margin-bottom: 20px;
+    color: #9b7a3d;
+    font-size: 0.76rem;
+    font-weight: 700;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+  }
+
+  .processo-titulo {
+    margin: 0;
+    font-size: clamp(3rem, 11vw, 6.2rem);
+    line-height: 0.93;
+    letter-spacing: -0.055em;
+    font-weight: 600;
+  }
+
+  .processo-introducao {
+    max-width: 650px;
+    margin: 28px 0 0;
+    color: #555;
+    font-size: 1.05rem;
+    line-height: 1.8;
+  }
+
+  .processo-lista {
+    position: relative;
+    max-width: 850px;
+    margin: 0 auto;
+  }
+
+  .processo-lista::before {
+    content: "";
+    position: absolute;
+    left: 18px;
+    top: 15px;
+    bottom: 15px;
+    width: 1px;
+    background: #d4cec3;
+  }
+
+  .processo-etapa {
+    position: relative;
+    display: grid;
+    grid-template-columns: 38px 1fr;
+    gap: 25px;
+    margin-bottom: 55px;
+  }
+
+  .processo-etapa:last-child {
+    margin-bottom: 0;
+  }
+
+  .processo-numero {
+    position: relative;
+    z-index: 2;
+    width: 37px;
+    height: 37px;
+    border: 1px solid #b18a4a;
+    border-radius: 50%;
+    background: #f4f1eb;
+    color: #9b7a3d;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.8rem;
+    font-weight: 700;
+  }
+
+  .processo-etapa-titulo {
+    margin: 2px 0 12px;
+    font-size: 1.35rem;
+    line-height: 1.3;
+    font-weight: 600;
+  }
+
+  .processo-etapa-texto {
+    margin: 0;
+    color: #555;
+    font-size: 1rem;
+    line-height: 1.8;
+  }
+
+  @media (min-width: 800px) {
+
+    .processo {
+      padding: 150px 60px;
+    }
+
+    .processo-topo {
+      margin-bottom: 100px;
+    }
+
+    .processo-introducao {
+      font-size: 1.1rem;
+    }
+
+    .processo-etapa {
+      grid-template-columns: 48px 1fr;
+      gap: 30px;
+      margin-bottom: 65px;
+    }
+
+    .processo-lista::before {
+      left: 23px;
+    }
+
+    .processo-numero {
+      width: 47px;
+      height: 47px;
+    }
+
+    .processo-etapa-titulo {
+      font-size: 1.55rem;
+    }
+
+    .processo-etapa-texto {
+      font-size: 1.05rem;
+    }
+
+  }
+</style>
+
+<!-- BLOCO 6 — O CÉU TAMBÉM DECIDE -->
+<section class="ceu" id="ceu">
+<img alt="Vista do céu sobre o Rio de Janeiro" class="ceu-imagem" src="../ceu.jpg"/>
+<div class="ceu-conteudo">
+<span class="ceu-rotulo">
+      The sky decides too
+    </span>
+<h2 class="ceu-titulo">
+      Not every day is a flying day.
+    </h2>
+<p class="ceu-texto">
+      Free flight depends on weather and wind conditions. That is why the team monitors the forecast and local conditions to advise you on the best time to fly.
+    </p>
+<p class="ceu-destaque">
+      Flight conditions are monitored before takeoff. If the minimum requirements for the flight are not met, takeoff is not authorized. In that case, the flight can be rescheduled for a more favorable time.
+    </p>
+</div>
+</section>
+<style>
+  .ceu {
+    position: relative;
+    min-height: 720px;
+    padding: 120px 20px;
+    display: flex;
+    align-items: flex-end;
+    overflow: hidden;
+    background: #111;
+    color: #fff;
+  }
+
+  .ceu-imagem {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .ceu::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+      linear-gradient(
+        to top,
+        rgba(0, 0, 0, 0.82) 0%,
+        rgba(0, 0, 0, 0.48) 45%,
+        rgba(0, 0, 0, 0.08) 100%
+      );
+  }
+
+  .ceu-conteudo {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  .ceu-rotulo {
+    display: block;
+    margin-bottom: 20px;
+    color: #c9a15a;
+    font-size: 0.76rem;
+    font-weight: 700;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+  }
+
+  .ceu-titulo {
+    max-width: 750px;
+    margin: 0;
+    font-size: clamp(3rem, 11vw, 6.5rem);
+    line-height: 0.92;
+    letter-spacing: -0.055em;
+    font-weight: 600;
+  }
+
+  .ceu-texto {
+    max-width: 650px;
+    margin: 32px 0 0;
+    color: rgba(255, 255, 255, 0.82);
+    font-size: 1.05rem;
+    line-height: 1.8;
+  }
+
+  .ceu-destaque {
+    max-width: 650px;
+    margin: 28px 0 0;
+    padding-left: 20px;
+    border-left: 2px solid #c9a15a;
+    color: #fff;
+    font-size: 1.1rem;
+    line-height: 1.7;
+    font-weight: 500;
+  }
+
+  @media (min-width: 800px) {
+
+    .ceu {
+      min-height: 820px;
+      padding: 150px 60px;
+    }
+
+    .ceu-texto {
+      font-size: 1.1rem;
+    }
+
+    .ceu-destaque {
+      font-size: 1.2rem;
+    }
+
+  }
+</style>
+
+<!-- BLOCO 7 — ANTES DE VOAR -->
+<section class="antes-voar" id="antes-de-voar">
+<div class="antes-voar-conteudo">
+<div class="antes-voar-topo">
+<span class="antes-voar-rotulo">
+        Before flying
+      </span>
+<h2 class="antes-voar-titulo">
+        A few things you need to know.
+      </h2>
+<p class="antes-voar-introducao">
+        For your experience to go as smoothly as possible, there are some important details to consider before the flight.
+      </p>
+</div>
+<div class="antes-voar-grid">
+<div class="antes-voar-item">
+<h3 class="antes-voar-item-titulo">
+          Never flown before?
+        </h3>
+<p class="antes-voar-item-texto">
+          No previous experience is required. Before takeoff, the pilot explains the procedures and instructions you must follow.
+        </p>
+</div>
+<div class="antes-voar-item">
+<h3 class="antes-voar-item-titulo">
+          Age
+        </h3>
+<p class="antes-voar-item-texto">
+          The activity is intended for people aged 18 and over. Minors aged 14 and up may fly with a parent or legal guardian present during registration.
+        </p>
+</div>
+<div class="antes-voar-item">
+<h3 class="antes-voar-item-titulo">
+          Weight
+        </h3>
+<p class="antes-voar-item-texto">
+          There is no single weight limit for all flights. The possibility of taking part depends on the pilot, the equipment, and the flight conditions.
+        </p>
+</div>
+<div class="antes-voar-item">
+<h3 class="antes-voar-item-titulo">
+          Footwear
+        </h3>
+<p class="antes-voar-item-texto">
+          Closed-toe footwear is preferred. Sandals or flip-flops may only be used if they are securely fastened to your feet.
+        </p>
+</div>
+<div class="antes-voar-item">
+<h3 class="antes-voar-item-titulo">
+          Your belongings
+        </h3>
+<p class="antes-voar-item-texto">
+          Small personal items can be stored in the equipment compartment. Backpacks and larger items are carried by a team member to the landing site.
+        </p>
+</div>
+<div class="antes-voar-item">
+<h3 class="antes-voar-item-titulo">
+          How to get there
+        </h3>
+<p class="antes-voar-item-texto">
+          The meeting takes place at the Clube São Conrado de Voo Livre headquarters. Directions to the exact location are sent via WhatsApp when you make your booking.
+        </p>
+</div>
+</div>
+</div>
+</section>
+<style>
+  .antes-voar {
+    background: #f4f1eb;
+    color: #151515;
+    padding: 110px 20px 120px;
+  }
+
+  .antes-voar-conteudo {
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  .antes-voar-topo {
+    max-width: 780px;
+    margin-bottom: 65px;
+  }
+
+  .antes-voar-rotulo {
+    display: block;
+    margin-bottom: 20px;
+    color: #9b7a3d;
+    font-size: 0.76rem;
+    font-weight: 700;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+  }
+
+  .antes-voar-titulo {
+    margin: 0;
+    font-size: clamp(3rem, 11vw, 6.2rem);
+    line-height: 0.93;
+    letter-spacing: -0.055em;
+    font-weight: 600;
+  }
+
+  .antes-voar-introducao {
+    max-width: 650px;
+    margin: 28px 0 0;
+    color: #555;
+    font-size: 1.05rem;
+    line-height: 1.8;
+  }
+
+  .antes-voar-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .antes-voar-item {
+    padding: 30px 26px;
+    background: #fff;
+    border: 1px solid #e2ddd4;
+  }
+
+  .antes-voar-item-titulo {
+    margin: 0 0 12px;
+    font-size: 1.2rem;
+    line-height: 1.3;
+    font-weight: 600;
+  }
+
+  .antes-voar-item-texto {
+    margin: 0;
+    color: #5c5c5c;
+    font-size: 0.98rem;
+    line-height: 1.75;
+  }
+
+  @media (min-width: 650px) {
+
+    .antes-voar-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+  }
+
+  @media (min-width: 800px) {
+
+    .antes-voar {
+      padding: 150px 60px;
+    }
+
+    .antes-voar-topo {
+      margin-bottom: 90px;
+    }
+
+    .antes-voar-grid {
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .antes-voar-item {
+      min-height: 190px;
+      padding: 34px 30px;
+    }
+
+    .antes-voar-item-titulo {
+      font-size: 1.3rem;
+    }
+
+    .antes-voar-item-texto {
+      font-size: 1rem;
+    }
+
+  }
+</style>
+
+<!-- BLOCO 8 — SEGURANÇA E PREPARAÇÃO -->
+<section class="seguranca" id="seguranca">
+<div class="seguranca-conteudo">
+<div class="seguranca-topo">
+<span class="seguranca-rotulo">
+        Safety and preparation
+      </span>
+<h2 class="seguranca-titulo">
+        Before flying, everything needs to be ready.
+      </h2>
+<p class="seguranca-introducao">
+        Preparation is part of the flight. The equipment, local conditions, and procedures are checked before takeoff.
+      </p>
+</div>
+<div class="seguranca-grid">
+<div class="seguranca-item">
+<span class="seguranca-numero">
+          01
+        </span>
+<h3 class="seguranca-item-titulo">
+          Equipment prepared
+        </h3>
+<p class="seguranca-item-texto">
+          The equipment is assembled and prepared according to the procedures for the activity before takeoff.
+        </p>
+</div>
+<div class="seguranca-item">
+<span class="seguranca-numero">
+          02
+        </span>
+<h3 class="seguranca-item-titulo">
+          Equipment checked
+        </h3>
+<p class="seguranca-item-texto">
+          After assembly, the necessary checks are carried out before the flight can be cleared.
+        </p>
+</div>
+<div class="seguranca-item">
+<span class="seguranca-numero">
+          03
+        </span>
+<h3 class="seguranca-item-titulo">
+          Instructions before takeoff
+        </h3>
+<p class="seguranca-item-texto">
+          The pilot explains the safety procedures, takeoff, landing, and the instructions to follow during the activity.
+        </p>
+</div>
+<div class="seguranca-item">
+<span class="seguranca-numero">
+          04
+        </span>
+<h3 class="seguranca-item-titulo">
+          Conditions monitored
+        </h3>
+<p class="seguranca-item-texto">
+          Weather and wind conditions are monitored before and during the takeoff preparation process.
+        </p>
+</div>
+<div class="seguranca-item">
+<span class="seguranca-numero">
+          05
+        </span>
+<h3 class="seguranca-item-titulo">
+          Takeoff clearance
+        </h3>
+<p class="seguranca-item-texto">
+          Takeoff is cleared when the conditions required for the flight are present.
+        </p>
+</div>
+<div class="seguranca-item">
+<span class="seguranca-numero">
+          06
+        </span>
+<h3 class="seguranca-item-titulo">
+          If conditions are not sufficient
+        </h3>
+<p class="seguranca-item-texto">
+          If the conditions required for the flight are not present, takeoff is not authorized and the flight can be rescheduled.
+        </p>
+</div>
+</div>
+<div class="seguranca-destaque">
+<p>
+        Takeoff takes place when the conditions required for the flight are present.
+      </p>
+</div>
+</div>
+</section>
+<style>
+  .seguranca {
+    background: #111;
+    color: #fff;
+    padding: 110px 20px 120px;
+  }
+
+  .seguranca-conteudo {
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  .seguranca-topo {
+    max-width: 800px;
+    margin-bottom: 70px;
+  }
+
+  .seguranca-rotulo {
+    display: block;
+    margin-bottom: 20px;
+    color: #c9a15a;
+    font-size: 0.76rem;
+    font-weight: 700;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+  }
+
+  .seguranca-titulo {
+    margin: 0;
+    font-size: clamp(3rem, 11vw, 6.2rem);
+    line-height: 0.93;
+    letter-spacing: -0.055em;
+    font-weight: 600;
+  }
+
+  .seguranca-introducao {
+    max-width: 680px;
+    margin: 28px 0 0;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 1.05rem;
+    line-height: 1.8;
+  }
+
+  .seguranca-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1px;
+    background: #343434;
+    border: 1px solid #343434;
+  }
+
+  .seguranca-item {
+    background: #111;
+    padding: 34px 28px;
+  }
+
+  .seguranca-numero {
+    display: block;
+    margin-bottom: 24px;
+    color: #c9a15a;
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+  }
+
+  .seguranca-item-titulo {
+    margin: 0 0 14px;
+    font-size: 1.3rem;
+    line-height: 1.3;
+    font-weight: 600;
+  }
+
+  .seguranca-item-texto {
+    margin: 0;
+    color: rgba(255, 255, 255, 0.68);
+    font-size: 0.98rem;
+    line-height: 1.8;
+  }
+
+  .seguranca-destaque {
+    margin-top: 50px;
+    padding: 32px 26px;
+    border-left: 2px solid #c9a15a;
+    background: #181818;
+  }
+
+  .seguranca-destaque p {
+    margin: 0;
+    color: #fff;
+    font-size: 1.15rem;
+    line-height: 1.7;
+    font-weight: 500;
+  }
+
+  @media (min-width: 650px) {
+
+    .seguranca-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+  }
+
+  @media (min-width: 800px) {
+
+    .seguranca {
+      padding: 150px 60px;
+    }
+
+    .seguranca-topo {
+      margin-bottom: 90px;
+    }
+
+    .seguranca-introducao {
+      font-size: 1.1rem;
+    }
+
+    .seguranca-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    .seguranca-item {
+      min-height: 250px;
+      padding: 38px 32px;
+    }
+
+    .seguranca-item-titulo {
+      font-size: 1.4rem;
+    }
+
+    .seguranca-item-texto {
+      font-size: 1rem;
+    }
+
+    .seguranca-destaque {
+      margin-top: 65px;
+      padding: 38px 34px;
+    }
+
+    .seguranca-destaque p {
+      font-size: 1.25rem;
+    }
+
+  }
+</style>
+
+<!-- BLOCO 9 — REGISTROS DO VOO -->
+<section class="registro" id="registros">
+<div class="registro-conteudo">
+<span class="registro-rotulo">
+      Flight recordings
+    </span>
+<h2 class="registro-titulo">
+      One flight. Many perspectives.
+    </h2>
+<p class="registro-texto">
+      Recordings in <strong>GoPro</strong> and <strong>360°</strong>
+      capture the experience of the sky from different perspectives and in high image quality.
+    </p>
+<p class="registro-destaque">
+      You choose how you want to relive the flight.
+    </p>
+</div>
+</section>
+<style>
+  .registro {
+    background: #f4f1eb;
+    color: #151515;
+    padding: 85px 20px;
+  }
+
+  .registro-conteudo {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .registro-rotulo {
+    display: block;
+    margin-bottom: 18px;
+    color: #9b7a3d;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+  }
+
+  .registro-titulo {
+    margin: 0;
+    font-size: clamp(2.7rem, 10vw, 5rem);
+    line-height: 0.98;
+    letter-spacing: -0.05em;
+    font-weight: 600;
+  }
+
+  .registro-texto {
+    max-width: 680px;
+    margin: 28px auto 0;
+    color: #555;
+    font-size: 1.05rem;
+    line-height: 1.8;
+  }
+
+  .registro-destaque {
+    margin: 28px auto 0;
+    color: #151515;
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1.6;
+  }
+
+  @media (min-width: 800px) {
+
+    .registro {
+      padding: 115px 60px;
+    }
+
+    .registro-texto {
+      font-size: 1.1rem;
+    }
+
+  }
+</style>
+
+<!-- BLOCO 10 — PERGUNTAS FREQUENTES -->
+<section class="faq" id="faq">
+<div class="faq-conteudo">
+<p class="secao-etiqueta">Frequently asked questions</p>
+<h2>Some answers before you fly.</h2>
+<div class="faq-lista">
+<div class="faq-item">
+<button class="faq-pergunta" type="button">
+<span>How is the pilot for my flight chosen?</span>
+<span class="faq-icone">+</span>
+</button>
+<div class="faq-resposta">
+<p>
+                        The pilot is assigned according to availability for the chosen date and time.
+                    </p>
+</div>
+</div>
+<div class="faq-item">
+<button class="faq-pergunta" type="button">
+<span>Where will the landing take place?</span>
+<span class="faq-icone">+</span>
+</button>
+<div class="faq-resposta">
+<p>
+                        The official landing site is Praia do Pepino.
+                    </p>
+</div>
+</div>
+<div class="faq-item">
+<button class="faq-pergunta" type="button">
+<span>Can I take the flight without anyone accompanying me?</span>
+<span class="faq-icone">+</span>
+</button>
+<div class="faq-resposta">
+<p>
+                        Yes. The tandem flight is carried out exclusively by the pilot and the passenger.
+                    </p>
+</div>
+</div>
+<div class="faq-item">
+<button class="faq-pergunta" type="button">
+<span>Can I bring someone with me on the day of the flight?</span>
+<span class="faq-icone">+</span>
+</button>
+<div class="faq-resposta">
+<p>
+                        Yes. The person accompanying you may go with you to the free-flight launch ramp. After takeoff, they can return accompanied by a team member.
+                    </p>
+</div>
+</div>
+<div class="faq-item">
+<button class="faq-pergunta" type="button">
+<span>When is payment made?</span>
+<span class="faq-icone">+</span>
+</button>
+<div class="faq-resposta">
+<p>
+                        Payment is made after the flight.
+                    </p>
+</div>
+</div>
+<div class="faq-item">
+<button class="faq-pergunta" type="button">
+<span>What payment methods are accepted?</span>
+<span class="faq-icone">+</span>
+</button>
+<div class="faq-resposta">
+<p>
+                        We accept Pix, cash, and credit or debit cards.
+                    </p>
+</div>
+</div>
+<div class="faq-item">
+<button class="faq-pergunta" type="button">
+<span>Are the recordings delivered on the same day?</span>
+<span class="faq-icone">+</span>
+</button>
+<div class="faq-resposta">
+<p>
+                        Yes. Shortly after landing, the available recordings are presented so you can watch them and choose which ones you would like to take with you.
+                    </p>
+</div>
+</div>
+<div class="faq-item">
+<button class="faq-pergunta" type="button">
+<span>Can I take the flight on a special date or occasion?</span>
+<span class="faq-icone">+</span>
+</button>
+<div class="faq-resposta">
+<p>
+                        Yes. The flight can be taken on any day when conditions are favorable for the activity.
+                    </p>
+</div>
+</div>
+<div class="faq-item">
+<button class="faq-pergunta" type="button">
+<span>Do I need to live in Rio de Janeiro to take the flight?</span>
+<span class="faq-icone">+</span>
+</button>
+<div class="faq-resposta">
+<p>
+                        No. Voa Rio! welcomes people from other cities, states, and other countries as well.
+                    </p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<script>
+
+/* ========================================
+   FAQ — ABRIR E FECHAR
+======================================== */
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    const perguntas = document.querySelectorAll(".faq-pergunta");
+
+    perguntas.forEach(function (pergunta) {
+
+        pergunta.addEventListener("click", function () {
+
+            const item = this.closest(".faq-item");
+            const resposta = item.querySelector(".faq-resposta");
+
+            const estavaAberto = item.classList.contains("aberto");
+
+
+            /* Fecha todos */
+
+            document.querySelectorAll(".faq-item").forEach(function (outroItem) {
+
+                outroItem.classList.remove("aberto");
+
+                const outraResposta =
+                    outroItem.querySelector(".faq-resposta");
+
+                outraResposta.style.maxHeight = "0px";
+                outraResposta.style.opacity = "0";
+                outraResposta.style.paddingBottom = "0px";
+
+            });
+
+
+            /* Abre somente se estava fechado */
+
+            if (!estavaAberto) {
+
+                item.classList.add("aberto");
+
+                resposta.style.maxHeight =
+                    resposta.scrollHeight + "px";
+
+                resposta.style.opacity = "1";
+
+                resposta.style.paddingBottom = "26px";
+
+            }
+
+        });
+
+    });
+
+});
+
+</script>
+<style>
+
+/* ========================================
+   BLOCO 10 — FAQ
+======================================== */
+
+.faq {
+    padding: 100px 20px;
+    background: #f5f3ee;
+    color: #111;
+}
+
+.faq-conteudo {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.faq .secao-etiqueta {
+    margin-bottom: 14px;
+    font-size: 12px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-weight: 600;
+    opacity: 0.65;
+}
+
+.faq h2 {
+    margin: 0 0 50px;
+    font-size: clamp(32px, 6vw, 52px);
+    line-height: 1.08;
+    font-weight: 500;
+    letter-spacing: -1.5px;
+}
+
+.faq-lista {
+    border-top: 1px solid rgba(17, 17, 17, 0.18);
+}
+
+.faq-item {
+    border-bottom: 1px solid rgba(17, 17, 17, 0.18);
+}
+
+.faq-pergunta {
+    width: 100%;
+    padding: 25px 4px;
+    border: 0;
+    background: transparent;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 20px;
+
+    text-align: left;
+
+    font: inherit;
+    font-size: 18px;
+    line-height: 1.4;
+
+    color: #111;
+
+    cursor: pointer;
+}
+
+.faq-pergunta span:first-child {
+    max-width: 800px;
+}
+
+.faq-icone {
+    flex-shrink: 0;
+
+    width: 28px;
+    height: 28px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 25px;
+    font-weight: 300;
+
+    transition: transform 0.3s ease;
+}
+
+.faq-item.aberto .faq-icone {
+    transform: rotate(45deg);
+}
+
+
+/* RESPOSTAS */
+
+.faq-resposta {
+    max-height: 0;
+    overflow: hidden;
+
+    opacity: 0;
+
+    padding-bottom: 0;
+
+    transition:
+        max-height 0.4s ease,
+        opacity 0.3s ease,
+        padding-bottom 0.4s ease;
+}
+
+.faq-resposta p {
+    max-width: 760px;
+
+    margin: 0;
+
+    padding: 0 45px 0 4px;
+
+    font-size: 16px;
+    line-height: 1.7;
+
+    color: rgba(17, 17, 17, 0.72);
+}
+
+.faq-item.aberto .faq-resposta {
+    opacity: 1;
+    padding-bottom: 26px;
+}
+
+
+/* ========================================
+   BLOCO 11 — CTA FINAL
+======================================== */
+
+.cta-final {
+    padding: 120px 20px;
+    background: #111;
+    color: #fff;
+    text-align: center;
+}
+
+.cta-final-conteudo {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.cta-final h2 {
+    margin: 0 0 24px;
+    font-size: clamp(34px, 7vw, 58px);
+    line-height: 1.05;
+    font-weight: 500;
+    letter-spacing: -1.8px;
+}
+
+.cta-final p {
+    max-width: 600px;
+    margin: 0 auto 36px;
+    font-size: 17px;
+    line-height: 1.7;
+    color: rgba(255, 255, 255, 0.72);
+}
+
+.cta-final .chamada-botao {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 15px 25px;
+
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    border-radius: 999px;
+
+    background: #fff;
+    color: #111;
+
+    text-decoration: none;
+
+    font-size: 15px;
+    font-weight: 600;
+
+    transition:
+        transform 0.25s ease,
+        background 0.25s ease;
+}
+
+.cta-final .chamada-botao:hover {
+    transform: translateY(-2px);
+    background: #f0eee9;
+}
+
+
+/* ========================================
+   RESPONSIVIDADE
+======================================== */
+
+@media (max-width: 600px) {
+
+    .faq {
+        padding: 75px 20px;
+    }
+
+    .faq h2 {
+        margin-bottom: 35px;
+    }
+
+    .faq-pergunta {
+        padding: 22px 0;
+        font-size: 17px;
+    }
+
+    .faq-resposta p {
+        padding-left: 0;
+        padding-right: 25px;
+        font-size: 15px;
+    }
+
+    .cta-final {
+        padding: 90px 20px;
+    }
+
+    .cta-final h2 {
+        font-size: 38px;
+    }
+
+}
+
+</style>
+
+<!-- BLOCO 11 — CHAMADA FINAL -->
+<section class="cta-final">
+<div class="cta-final-conteudo">
+<h2>
+            Ready to experience Rio from another perspective?
+        </h2>
+<p>
+            Talk to our team to learn more and book your flight.
+        </p>
+<a class="chamada-botao" href="https://wa.me/5521975899356?text=Hello%21+I+have+some+questions+about+Voa+Rio%21+flights+and+would+like+to+learn+more+or+book+my+flight." rel="noopener noreferrer" target="_blank">
+            More information and booking
+        </a>
+</div>
+</section>
+<!-- RODAPÉ -->
+<footer class="rodape">
+<div class="rodape-conteudo">
+<div class="rodape-marca">
+<h2>Voa Rio!</h2>
+<p>Rio at your feet. The sky ahead of you.</p>
+</div>
+</div>
+
+</footer>
+<!-- ABA FLUTUANTE DO WHATSAPP -->
+<a aria-label="Fale conosco pelo WhatsApp" class="whatsapp-flutuante" href="https://wa.me/5521975899356?text=Hello%21+I+have+some+questions+about+Voa+Rio%21+flights+and+would+like+to+learn+more+or+book+my+flight." rel="noopener noreferrer" target="_blank">
+<svg aria-hidden="true" viewbox="0 0 24 24">
+<path d="M20.52 3.48A11.87 11.87 0 0 0 12.06 0C5.5 0 .16 5.34.16 11.9c0 2.1.55 4.15 1.6 5.96L.05 24l6.28-1.65a11.9 11.9 0 0 0 5.73 1.46h.01c6.56 0 11.9-5.34 11.9-11.9 0-3.18-1.24-6.17-3.45-8.43ZM12.06 21.8h-.01a9.9 9.9 0 0 1-5.05-1.38l-.36-.21-3.73.98 1-3.64-.23-.37a9.9 9.9 0 0 1-1.52-5.28C2.16 6.44 6.6 2 12.06 2a9.87 9.87 0 0 1 7.03 2.92 9.88 9.88 0 0 1 2.91 7.04c0 5.46-4.44 9.9-9.94 9.9Zm5.43-7.42c-.3-.15-1.77-.87-2.05-.97-.28-.1-.48-.15-.68.15-.2.3-.78.97-.96 1.17-.18.2-.35.22-.65.07-.3-.15-1.25-.46-2.39-1.48-.88-.79-1.48-1.76-1.65-2.06-.17-.3-.02-.46.13-.61.14-.14.3-.35.45-.52.15-.18.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.68-1.63-.93-2.23-.25-.6-.5-.52-.68-.53h-.58c-.2 0-.52.07-.8.37-.28.3-1.05 1.03-1.05 2.5s1.08 2.9 1.23 3.1c.15.2 2.12 3.24 5.14 4.55.72.31 1.28.5 1.72.64.72.23 1.37.2 1.89.12.58-.09 1.77-.72 2.02-1.42.25-.7.25-1.3.18-1.42-.07-.12-.27-.2-.57-.35Z"></path>
+</svg>
+<span>Contact us</span>
+</a>
+<style>
+/* ==============================
+   RODAPÉ
+   ============================== */
+
+.rodape {
+  background: #0d0d0d;
+  color: #ffffff;
+  padding: 70px 24px 24px;
+}
+
+.rodape-conteudo {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.rodape-marca h2 {
+  margin: 0 0 10px;
+  font-size: 30px;
+  font-weight: 600;
+  letter-spacing: -0.5px;
+}
+
+.rodape-marca p {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.65);
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.rodape-base {
+  max-width: 1100px;
+  margin: 55px auto 0;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.rodape-base p {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.45);
+  font-size: 12px;
+}
+
+
+/* ==============================
+   ABA FLUTUANTE DO WHATSAPP
+   ============================== */
+
+.whatsapp-flutuante {
+  position: fixed;
+  right: 18px;
+  bottom: 18px;
+  z-index: 9999;
+
+  display: flex;
+  align-items: center;
+  gap: 9px;
+
+  padding: 13px 17px;
+  border-radius: 999px;
+
+  background: #111111;
+  color: #ffffff;
+
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.22);
+
+  transition:
+    opacity 0.25s ease,
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.whatsapp-flutuante svg {
+  width: 20px;
+  height: 20px;
+  fill: #25D366;
+  flex-shrink: 0;
+}
+
+.whatsapp-flutuante:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 11px 34px rgba(0, 0, 0, 0.28);
+}
+
+.whatsapp-flutuante.oculta {
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(10px);
+}
+
+
+/* ==============================
+   CELULAR
+   ============================== */
+
+@media (max-width: 600px) {
+
+  .rodape {
+    padding: 55px 20px 22px;
+  }
+
+  .rodape-base {
+    margin-top: 45px;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .whatsapp-flutuante {
+    right: 14px;
+    bottom: 14px;
+    padding: 13px 15px;
+  }
+}
+</style>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+  const abaWhatsApp = document.querySelector(".whatsapp-flutuante");
+
+  const botoesWhatsApp = document.querySelectorAll(
+    ".botao-cabecalho, .botao-hero, .chamada-botao"
+  );
+
+  if (!abaWhatsApp || !botoesWhatsApp.length) {
+    return;
+  }
+
+  const elementosVisiveis = new Set();
+
+  const observador = new IntersectionObserver(
+    function (entradas) {
+
+      entradas.forEach(function (entrada) {
+
+        if (entrada.isIntersecting) {
+          elementosVisiveis.add(entrada.target);
+        } else {
+          elementosVisiveis.delete(entrada.target);
+        }
+
+      });
+
+      if (elementosVisiveis.size > 0) {
+        abaWhatsApp.classList.add("oculta");
+      } else {
+        abaWhatsApp.classList.remove("oculta");
+      }
+
+    },
+    {
+      threshold: 0.15
+    }
+  );
+
+  botoesWhatsApp.forEach(function (botao) {
+    observador.observe(botao);
+  });
+
+});
+</script>
+<script src="../js/idioma.js"></script>
+</body>
+</html>
